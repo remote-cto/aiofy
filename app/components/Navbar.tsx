@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import LoadingAnimation from "./LoadingAnimation";
+
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
