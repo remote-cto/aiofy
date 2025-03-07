@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import LoadingAnimation from "./LoadingAnimation";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,6 +10,8 @@ const Navbar: React.FC = () => {
   };
 
   return (
+    <>
+   
     <nav className="bg-white py-4 px-6 ">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-3">
@@ -40,9 +43,9 @@ const Navbar: React.FC = () => {
           <a href="/" className="text-gray-900 hover:text-gray-900">
             Contact
           </a>
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-4 rounded-md">
-            Get Started
-          </button>
+          <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-4 rounded-md w-full">
+              Get Started
+            </button>
         </div>
 
         <div className="md:hidden">
@@ -92,6 +95,7 @@ const Navbar: React.FC = () => {
         </div>
       )}
     </nav>
+    </>
   );
 };
 
