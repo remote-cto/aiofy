@@ -27,8 +27,8 @@ const Service: React.FC<ServiceProps> = ({
       </div>
       <div className="flex-grow">
         <h3 className="text-2xl font-bold text-black mb-3">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <p className="text-gray-600">{extendedDescription}</p>
+        <p className="text-gray-800 mb-4">{description}</p>
+        <p className="text-gray-800">{extendedDescription}</p>
       </div>
     </div>
   );
@@ -62,7 +62,7 @@ const ServicesPage: React.FC = () => {
   return (
     <div className="container mx-auto px-14 py-16">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 mb-4">Our Services</h1>
+        <h1 className="text-4xl font-extrabold text-black mb-4">Our Services</h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Transforming businesses through cutting-edge AI solutions tailored to your specific needs.
         </p>
