@@ -1,9 +1,35 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoadingAnimation from "./LoadingAnimation";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (isMenuOpen && !target.closest('nav')) {
+        setIsMenuOpen(false);
+      }
+    };
+    
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMenuOpen]);
+
+  // Prevent scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -11,90 +37,117 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-   
-    <nav className="bg-white py-4 px-6 ">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="flex items-center space-x-3">
-          <div className="h-12 w-12 bg-black rounded-lg flex items-center justify-center">
-            <svg
-              className="h-8 w-8 text-white"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                fill="currentColor"
-              />
-            </svg>
-          </div>
-          <div>
-            <h1 className="text-xl font-bold">Nirvana.AI</h1>
-            <p className="text-xs text-gray-800">
-              Building Intelligent AI Solutions{" "}
-            </p>
-          </div>
-        </div>
-
-        <div className="hidden md:flex items-center space-x-6">
-          <a href="/" className="text-gray-900 hover:text-gray-900">
-            Home
-          </a>
-          <a href="/" className="text-gray-900 hover:text-gray-900">
-            Contact
-          </a>
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-4 rounded-md w-full">
-              Get Started
-            </button>
-        </div>
-
-        <div className="md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-gray-700 hover:text-gray-900 focus:outline-none"
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {isMenuOpen ? (
+      <nav className="bg-white py-4 px-6 shadow-sm relative z-50">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="flex items-center space-x-3">
+            <div className="h-12 w-12 bg-black rounded-lg flex items-center justify-center">
+              <svg
+                className="h-8 w-8 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
+                  d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                  fill="currentColor"
                 />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-      </div>
+              </svg>
+            </div>
+            <div>
+              <h1 className="text-xl font-bold">Nirvana.AI</h1>
+              <p className="text-xs text-gray-800">
+                Building Intelligent AI Solutions{" "}
+              </p>
+            </div>
+          </div>
 
-      {isMenuOpen && (
-        <div className="md:hidden mt-4 pb-4 px-4">
-          <div className="flex flex-col space-y-3">
-            <a href="/" className="text-gray-700 hover:text-gray-900 py-2">
-              Home
+          <div className="hidden md:flex items-center space-x-6">
+            <a href="/" className="text-gray-900 hover:text-gray-900 relative group">
+              <span>Home</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="/" className="text-gray-700 hover:text-gray-900 py-2">
-              Contact
+            <a href="/" className="text-gray-900 hover:text-gray-900 relative group">
+              <span>Contact</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-4 rounded-md w-full">
+            <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md">
               Get Started
             </button>
           </div>
+
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-gray-900 focus:outline-none w-10 h-10 flex items-center justify-center relative"
+              aria-label="Toggle menu"
+            >
+              <div className="w-6 h-6 relative">
+                <span 
+                  className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
+                    isMenuOpen ? 'rotate-45 top-3' : 'rotate-0 top-1'
+                  }`}
+                ></span>
+                <span 
+                  className={`absolute h-0.5 w-6 bg-gray-800 top-3 transition-all duration-200 ${
+                    isMenuOpen ? 'opacity-0' : 'opacity-100'
+                  }`}
+                ></span>
+                <span 
+                  className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
+                    isMenuOpen ? '-rotate-45 top-3' : 'rotate-0 top-5'
+                  }`}
+                ></span>
+              </div>
+            </button>
+          </div>
         </div>
-      )}
-    </nav>
+
+        <div 
+          className={`md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${
+            isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+          }`}
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+
+        <div 
+          className={`md:hidden fixed right-0 top-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="p-6">
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-xl font-bold">Menu</h2>
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="text-gray-700 hover:text-gray-900 focus:outline-none"
+              >
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="flex flex-col space-y-4">
+              <a 
+                href="/" 
+                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
+              >
+                Home
+              </a>
+              <a 
+                href="/" 
+                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
+              >
+                Contact
+              </a>
+              <div className="pt-4">
+                <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-4 rounded-md w-full transition-all duration-300 shadow-sm hover:shadow">
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </>
   );
 };
