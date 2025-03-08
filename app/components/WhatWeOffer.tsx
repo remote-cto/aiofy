@@ -43,21 +43,15 @@ const Service: React.FC<ServiceProps> = ({
             <p className="text-gray-800 mb-4">{extendedDescription}</p>
             <button
               onClick={() => setShowFullDescription(false)}
-              className="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 mt-2"
+              className="text-black bg-[#FFBF23] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
             >
               Read Less
             </button>
           </div>
         ) : (
-          <CoolMode
-        options={{
-          particle:
-            "https://pbs.twimg.com/profile_images/1782811051504885763/YR5-kWOI_400x400.jpg",
-        }}
-      >
           <button
             onClick={() => setShowFullDescription(true)}
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-black bg-[#FFBF23] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
           >
             Learn More
             <svg
@@ -76,7 +70,6 @@ const Service: React.FC<ServiceProps> = ({
               />
             </svg>
           </button>
-          </CoolMode>
         )}
       </div>
     </div>
