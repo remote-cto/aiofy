@@ -1,33 +1,32 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (isMenuOpen && !target.closest('nav')) {
+      if (isMenuOpen && !target.closest("nav")) {
         setIsMenuOpen(false);
       }
     };
-    
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
   }, [isMenuOpen]);
 
   // Prevent scroll when menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     }
-    
+
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [isMenuOpen]);
 
@@ -62,11 +61,17 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
-            <a href="/" className="text-gray-900 hover:text-gray-900 relative group">
+            <a
+              href="/"
+              className="text-gray-900 hover:text-gray-900 relative group"
+            >
               <span>Home</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="/" className="text-gray-900 hover:text-gray-900 relative group">
+            <a
+              href="/contact"
+              className="text-gray-900 hover:text-gray-900 relative group"
+            >
               <span>Contact</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
@@ -82,19 +87,19 @@ const Navbar: React.FC = () => {
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6 relative">
-                <span 
+                <span
                   className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? 'rotate-45 top-3' : 'rotate-0 top-1'
+                    isMenuOpen ? "rotate-45 top-3" : "rotate-0 top-1"
                   }`}
                 ></span>
-                <span 
+                <span
                   className={`absolute h-0.5 w-6 bg-gray-800 top-3 transition-all duration-200 ${
-                    isMenuOpen ? 'opacity-0' : 'opacity-100'
+                    isMenuOpen ? "opacity-0" : "opacity-100"
                   }`}
                 ></span>
-                <span 
+                <span
                   className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? '-rotate-45 top-3' : 'rotate-0 top-5'
+                    isMenuOpen ? "-rotate-45 top-3" : "rotate-0 top-5"
                   }`}
                 ></span>
               </div>
@@ -102,16 +107,16 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        <div 
+        <div
           className={`md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${
-            isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
           onClick={() => setIsMenuOpen(false)}
         ></div>
 
-        <div 
+        <div
           className={`md:hidden fixed right-0 top-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
-            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="p-6">
@@ -121,20 +126,30 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className="text-gray-700 hover:text-gray-900 focus:outline-none"
               >
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
             <div className="flex flex-col space-y-4">
-              <a 
-                href="/" 
+              <a
+                href="/"
                 className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
               >
                 Home
               </a>
-              <a 
-                href="/" 
+              <a
+                href="/contact"
                 className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
               >
                 Contact
