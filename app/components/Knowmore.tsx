@@ -190,50 +190,50 @@ const Knowmore = () => {
           </section>
 
           {/* Generative AI Solutions Section */}
-          <section className="bg-gray-800 bg-opacity-50 rounded-2xl p-8 border border-purple-500/30 shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
+          <section className="bg-[#FFBF23] bg-opacity-50 rounded-2xl p-8 border border-purple-500/30 shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="lg:w-3/4">
                 <h2 className="text-3xl font-bold mb-4 flex items-center">
-                  <span className="text-purple-400 mr-3">3.</span>
+                  <span className="text-black mr-3">3.</span>
                   Generative AI Solutions – Redefining Innovation and Automation
                 </h2>
-                <p className="mb-6 text-gray-300">
+                <p className="mb-6 text-black">
                   Go beyond traditional AI capabilities with our{" "}
-                  <span className="font-semibold text-purple-300">
+                  <span className="font-semibold text-black">
                     Generative AI Solutions
                   </span>
                   —designed to{" "}
-                  <span className="font-semibold text-purple-300">
+                  <span className="font-semibold text-black">
                     create, optimize, and transform
                   </span>
                   . From{" "}
-                  <span className="font-semibold text-purple-300">
+                  <span className="font-semibold text-black">
                     content generation
                   </span>{" "}
                   to{" "}
-                  <span className="font-semibold text-purple-300">
+                  <span className="font-semibold text-black">
                     complex simulations
                   </span>
                   , our solutions unlock the full potential of AI to fuel
                   innovation at every level.
                 </p>
                 <div>
-                  <h3 className="text-xl font-bold mb-4 text-purple-300 flex items-center">
-                    <span className="text-purple-400 mr-2">🔹</span> What We
+                  <h3 className="text-xl font-bold mb-4 text-black flex items-center">
+                    <span className="text-black mr-2">🔹</span> What We
                     Offer:
                   </h3>
                   <ul className="space-y-3 pl-6">
                     <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 rounded-full bg-purple-400 mt-2 mr-2"></span>
+                      <span className="inline-block w-2 h-2 rounded-full bg-black mt-2 mr-2"></span>
                       <div>
-                        <span className="font-bold text-white">
+                        <span className="font-bold text-black">
                           AI-Powered Content Creation:
                         </span>
                         <ul className="pl-6 mt-2 space-y-2">
                           <li className="flex items-start">
-                            <span className="inline-block w-1 h-1 rounded-full bg-purple-300 mt-2 mr-2"></span>
+                            <span className="inline-block w-1 h-1 rounded-full bg-black mt-2 mr-2"></span>
                             <div>
-                              <span className="font-bold text-purple-200">
+                              <span className="font-bold text-black">
                                 Text:
                               </span>{" "}
                               Generate high-converting marketing copy, reports,
@@ -241,9 +241,9 @@ const Knowmore = () => {
                             </div>
                           </li>
                           <li className="flex items-start">
-                            <span className="inline-block w-1 h-1 rounded-full bg-purple-300 mt-2 mr-2"></span>
+                            <span className="inline-block w-1 h-1 rounded-full bg-black mt-2 mr-2"></span>
                             <div>
-                              <span className="font-bold text-purple-200">
+                              <span className="font-bold text-black">
                                 Visuals:
                               </span>{" "}
                               AI-generated images and videos for advertising and
@@ -251,9 +251,9 @@ const Knowmore = () => {
                             </div>
                           </li>
                           <li className="flex items-start">
-                            <span className="inline-block w-1 h-1 rounded-full bg-purple-300 mt-2 mr-2"></span>
+                            <span className="inline-block w-1 h-1 rounded-full bg-black mt-2 mr-2"></span>
                             <div>
-                              <span className="font-bold text-purple-200">
+                              <span className="font-bold text-black">
                                 Code:
                               </span>{" "}
                               Automate coding tasks with AI-based code
@@ -265,9 +265,9 @@ const Knowmore = () => {
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 rounded-full bg-purple-400 mt-2 mr-2"></span>
+                      <span className="inline-block w-2 h-2 rounded-full bg-black mt-2 mr-2"></span>
                       <div>
-                        <span className="font-bold text-white">
+                        <span className="font-bold text-black">
                           Synthetic Data Generation:
                         </span>{" "}
                         Create high-quality synthetic data to train models where
@@ -276,9 +276,9 @@ const Knowmore = () => {
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 rounded-full bg-purple-400 mt-2 mr-2"></span>
+                      <span className="inline-block w-2 h-2 rounded-full bg-black mt-2 mr-2"></span>
                       <div>
-                        <span className="font-bold text-white">
+                        <span className="font-bold text-black">
                           Conversational AI:
                         </span>{" "}
                         Develop lifelike chatbots and virtual assistants with
@@ -287,9 +287,9 @@ const Knowmore = () => {
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 rounded-full bg-purple-400 mt-2 mr-2"></span>
+                      <span className="inline-block w-2 h-2 rounded-full bg-black mt-2 mr-2"></span>
                       <div>
-                        <span className="font-bold text-white">
+                        <span className="font-bold text-black">
                           Design and Creativity Automation:
                         </span>{" "}
                         Use AI to automate graphic design, video editing, and
@@ -297,9 +297,9 @@ const Knowmore = () => {
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <span className="inline-block w-2 h-2 rounded-full bg-purple-400 mt-2 mr-2"></span>
+                      <span className="inline-block w-2 h-2 rounded-full bg-black mt-2 mr-2"></span>
                       <div>
-                        <span className="font-bold text-white">
+                        <span className="font-bold text-black">
                           AI-Driven Simulations:
                         </span>{" "}
                         Build predictive simulations for financial forecasting,
@@ -310,7 +310,7 @@ const Knowmore = () => {
                 </div>
               </div>
               <div className="lg:w-1/4 flex items-center justify-center">
-                <div className="w-48 h-48 bg-purple-500/20 rounded-full flex items-center justify-center">
+                <div className="w-48 h-48 bg-black rounded-full flex items-center justify-center">
                   <div className="text-6xl">✨</div>
                 </div>
               </div>
