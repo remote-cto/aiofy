@@ -6,10 +6,12 @@ import About from "./components/About";
 import ContactForm from "./components/ContactForm";
 import Knowmore from "./components/Knowmore";
 import ScrollToTop from "./components/ScrollToTop";
+import LoadingAnimation from "./components/LoadingAnimation";
 
 export default function Home() {
   return (
     <div>
+      <LoadingAnimation/>
       <Navbar/>
       <About/>
       <WhatWeOffer/>
