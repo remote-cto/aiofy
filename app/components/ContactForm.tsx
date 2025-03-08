@@ -161,9 +161,23 @@ const ContactForm: React.FC = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0"
+                    className="px-8 py-3 bg-white text-indigo-800 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex mx-auto items-center"
                   >
                     Send Message
+                    <svg
+                      className="w-5 h-5 ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
                   </button>
                 </div>
               </form>
