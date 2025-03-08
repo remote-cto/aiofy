@@ -161,7 +161,7 @@ const ContactForm: React.FC = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="px-8 py-3 bg-white text-indigo-800 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex mx-auto items-center"
+                    className="px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex mx-auto items-center"
                   >
                     Send Message
                     <svg
