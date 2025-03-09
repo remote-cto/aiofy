@@ -114,9 +114,9 @@ const ServicesPage: React.FC = () => {
     <div id="services-section" className="bg-white">
       <div className="container mx-auto px-4 md:px-14 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-extrabold text-black mb-4">
-            Our Services
-          </h1>
+          <h2 className=" text-black mb-4 text-3xl  sm:text-5xl font-['SpaceGrotesk']">
+          Our <span className="text-[#FFBF23]">Services</span>
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transforming businesses through cutting-edge AI solutions tailored
             to your specific needs.
