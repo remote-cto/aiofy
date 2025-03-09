@@ -34,9 +34,20 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to scroll to services section
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("services-section");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    }
+  };
+
   return (
     <>
-      <nav className="bg-white py-4 px-6  relative z-50">
+      <nav className="bg-white py-4 px-6 relative z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <div className="h-12 w-12 bg-black rounded-lg flex items-center justify-center">
@@ -75,7 +86,10 @@ const Navbar: React.FC = () => {
               <span>Contact</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md">
+            <button 
+              onClick={scrollToServices}
+              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
+            >
               Get Started
             </button>
           </div>
@@ -155,7 +169,10 @@ const Navbar: React.FC = () => {
                 Contact
               </a>
               <div className="pt-4">
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-4 rounded-md w-full transition-all duration-300 shadow-sm hover:shadow">
+                <button 
+                  onClick={scrollToServices}
+                  className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-4 rounded-md w-full transition-all duration-300 shadow-sm hover:shadow"
+                >
                   Get Started
                 </button>
               </div>

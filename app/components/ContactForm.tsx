@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactForm: React.FC = () => {
   return (
-    <section className="bg-[#FFBF23]   min-h-[100dvh]" id="contact">
+    <section className="bg-[#FFBF23]" id="contact">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-4">
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">

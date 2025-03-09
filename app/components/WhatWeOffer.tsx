@@ -111,7 +111,7 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <div id="services-section" className="bg-white">
       <div className="container mx-auto px-4 md:px-14 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-extrabold text-black mb-4">
