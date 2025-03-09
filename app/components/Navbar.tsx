@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
               <span className="font-['SpaceGrotesk']">Contact</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <button 
+            <button
               onClick={scrollToServices}
               className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md font-['SpaceGrotesk']"
             >
@@ -169,7 +169,7 @@ const Navbar: React.FC = () => {
                 Contact
               </a>
               <div className="pt-4">
-                <button 
+                <button
                   onClick={scrollToServices}
                   className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-4 rounded-md w-full transition-all duration-300 shadow-sm hover:shadow font-['SpaceGrotesk']"
                 >
