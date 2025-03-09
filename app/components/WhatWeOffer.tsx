@@ -1,153 +1,162 @@
 "use client";
-import React, { useState } from "react";
 
-interface ServiceProps {
-  title: string;
-  description: string;
-  extendedDescription: string;
-  imageSrc: string;
-  imageAlt: string;
-}
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+// import { CoolMode } from "../../components/ui/cool-mode";
 
-const Service: React.FC<ServiceProps> = ({
-  title,
-  description,
-  extendedDescription,
-  imageSrc,
-  imageAlt,
-}) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [showFullDescription, setShowFullDescription] = useState(false);
+const ServicesPage = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-  return (
-    <div
-      className="flex flex-col h-full transition-all duration-300 rounded-lg p-4 hover:shadow-xl"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="mb-6 overflow-hidden rounded-lg">
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className={`rounded-lg shadow-lg w-full h-64 object-cover transition-transform duration-500 ${
-            isHovered ? "scale-105" : "scale-100"
-          }`}
-        />
-      </div>
-      <div className="flex-grow">
-        <h3 className="text-2xl font-bold text-black mb-3">{title}</h3>
-        <p className="text-gray-800 mb-4">{description}</p>
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
+  };
 
-        {showFullDescription ? (
-          <div className="animate-fadeIn">
-            <p className="text-gray-800 mb-4">{extendedDescription}</p>
-            <button
-              onClick={() => setShowFullDescription(false)}
-              className="text-black bg-[#FFBF23] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
-            >
-              Read Less
-            </button>
-          </div>
-        ) : (
-          <button
-            onClick={() => setShowFullDescription(true)}
-            className="text-black bg-[#FFBF23] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
-          >
-            Learn More
-            <svg
-              className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 14 10"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 5h12m0 0L9 1m4 4L9 9"
-              />
-            </svg>
-          </button>
-        )}
-      </div>
-    </div>
-  );
-};
+  const titleVariants = {
+    hidden: {
+      opacity: 0,
+      y: -50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 120,
+      },
+    },
+  };
 
-const ServicesPage: React.FC = () => {
-  const services: ServiceProps[] = [
+  const services = [
     {
+      image: "/images/ManagedIT.jpg",
       title: "AI Consulting",
       description:
-        "Gain a competitive edge with our AI Consulting services. Our experts dive deep into your business challenges, identifying opportunities to integrate AI seamlessly. We design strategic AI roadmaps that are practical, scalable, and result-driven—helping you move from concept to execution with confidence..",
-      extendedDescription:
-        "We provide strategic AI consulting to help businesses identify opportunities, overcome challenges, and implement AI-driven solutions. From ideation to execution, our experts work with you to create a roadmap that aligns with your goals.",
-      imageSrc:
-        "https://plus.unsplash.com/premium_photo-1661508620175-3ae20da61cda?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVzaW5lc3MlMjBtYW58ZW58MHx8MHx8fDA%3D",
-      imageAlt: "AI Consulting Service",
+        "Gain a competitive edge with our AI Consulting services. Our experts dive deep into your business challenges, identifying opportunities to integrate AI seamlessly. We design strategic AI roadmaps that are practical, scalable, and result-driven—helping you move from concept to execution with confidence. We provide strategic AI consulting to help businesses identify opportunities, overcome challenges, and implement AI-driven solutions. From ideation to execution, our experts work with you to create a roadmap that aligns with your goals.",
+      link: "/services/AiConsulting",
     },
     {
+      image: "/images/ManagedIT.jpg",
       title: "AI Model Training",
       description:
-        "Empower your AI systems with precision. We offer end-to-end AI model training, leveraging state-of-the-art techniques and datasets to ensure your models are not just intelligent but also accurate and efficient. From supervised to unsupervised learning, we cover it all.",
-      extendedDescription:
-        "Our team designs, trains, and deploys custom AI models tailored to your specific needs. Whether it's predictive analytics, natural language processing, or computer vision, we ensure your models are accurate, scalable, and future-ready.",
-      imageSrc:
-        "https://plus.unsplash.com/premium_photo-1661508620175-3ae20da61cda?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVzaW5lc3MlMjBtYW58ZW58MHx8MHx8fDA%3D",
-      imageAlt: "AI Model Training Service",
+        "Empower your AI systems with precision. We offer end-to-end AI model training, leveraging state-of-the-art techniques and datasets to ensure your models are not just intelligent but also accurate and efficient. From supervised to unsupervised learning, we cover it all. Our team designs, trains, and deploys custom AI models tailored to your specific needs. Whether it’s predictive analytics, natural language processing, or computer vision, we ensure your models are accurate, scalable, and future-ready.",
+      link: "/services/AiModelTraining",
     },
     {
+      image: "/images/ManagedIT.jpg",
       title: "Generative AI Solutions",
       description:
-        "Reimagine what's possible with our GEN AI solutions. From AI-driven content creation to automated code generation, our generative models push the boundaries of innovation. Transform how you interact, create, and communicate with AI capabilities designed for the future.",
-      extendedDescription:
-        "Unlock creativity and efficiency with our Generative AI solutions. From content creation to design automation, we help you leverage the power of AI to generate innovative ideas, streamline workflows, and deliver exceptional results.",
-      imageSrc:
-        "https://plus.unsplash.com/premium_photo-1661508620175-3ae20da61cda?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVzaW5lc3MlMjBtYW58ZW58MHx8MHx8fDA%3D",
-      imageAlt: "Generative AI Solutions Service",
+        "Reimagine what’s possible with our GEN AI solutions. From AI-driven content creation to automated code generation, our generative models push the boundaries of innovation. Transform how you interact, create, and communicate with AI capabilities designed for the future. Unlock creativity and efficiency with our Generative AI solutions. From content creation to design automation, we help you leverage the power of AI to generate innovative ideas, streamline workflows, and deliver exceptional results. ",
+      link: "/services/GenerativeAiSolutions",
     },
   ];
 
   return (
-    <div id="services-section" className="bg-white">
-      <div className="container mx-auto px-4 md:px-14 py-16">
-        <div className="text-center mb-16">
-          <h2 className=" text-black mb-4 text-3xl  sm:text-5xl font-['SpaceGrotesk']">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="bg-white py-16 "
+    >
+      <div className="container mx-auto px-4">
+        <motion.h1
+          variants={titleVariants}
+          className="text-center text-3xl md:text-5xl font-extrabold mb-14  tracking-tight font-['SpaceGrotesk']"
+        >
           Our <span className="text-[#FFBF23]">Services</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transforming businesses through cutting-edge AI solutions tailored
-            to your specific needs.
-          </p>
-        </div>
+        </motion.h1>
+        {/* <h2 className=" text-black mb-4 text-3xl  sm:text-5xl font-['SpaceGrotesk'] text-center">
+          Our <span className="text-[#FFBF23]">Services</span>
+           </h2> */}
 
-        {/* Mobile view */}
-        <div className="block md:hidden space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="border-b border-gray-200 pb-10 last:border-0"
+              variants={cardVariants}
+              className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 flex flex-col"
             >
-              <Service {...service} />
-            </div>
-          ))}
-        </div>
+              <div className="relative w-full h-56 overflow-hidden">
+                <motion.div
+                  initial={{ scale: 1.1, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{
+                    delay: 0.5 + index * 0.2,
+                    duration: 0.8,
+                  }}
+                >
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                </motion.div>
+              </div>
+              <div className="p-6 flex-grow flex flex-col">
+                <h2 className="text-xl font-bold text-black mb-3">
+                  {service.title}
+                </h2>
+                <p className="text-gray-700 leading-relaxed mb-4 flex-grow">
+                  {service.description}
+                </p>
+                <div className="mt-auto">
+                  {/* <CoolMode> */}
+                  <Link
+                    href={service.link}
+                    className="group relative block w-full"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center justify-center bg-[#FFBF23] text-black py-2 rounded-lg  transition-colors duration-300 ease-in-out"
+                    >
+                      <span className="mr-2">Learn More</span>
 
-        {/* Desktop view */}
-        <div className="hidden md:grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="border-r border-gray-200 last:border-0 px-4"
-            >
-              <Service {...service} />
-            </div>
+                      <motion.span
+                        initial={{ x: 0 }}
+                        animate={{ x: 0 }}
+                        whileHover={{ x: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                        className="inline-block"
+                      >
+                        <ArrowRight className="w-5 h-5" />
+                      </motion.span>
+                    </motion.div>
+                  </Link>
+                  {/* </CoolMode> */}
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
