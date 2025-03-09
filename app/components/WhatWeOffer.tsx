@@ -136,7 +136,7 @@ const ServicesPage = () => {
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center justify-center bg-[#FFBF23] text-black py-2 rounded-lg  transition-colors duration-300 ease-in-out"
                     >
-                      <span className="mr-2">Learn More</span>
+                      <span className="mr-2 font-['SpaceGrotesk']">Learn More</span>
 
                       <motion.span
                         initial={{ x: 0 }}
