@@ -92,7 +92,7 @@ const ContactForm: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-4">
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <h2 className="font-heading mb-4 font-bold tracking-tight text-black text-3xl sm:text-5xl">
+            <h2 className="font-heading mb-4 font-bold tracking-tight text-black text-3xl sm:text-5xl font-['SpaceGrotesk']">
               Get in Touch
             </h2>
           </div>
@@ -194,7 +194,7 @@ const ContactForm: React.FC = () => {
               </ul>
             </div>
             <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
-              <h2 className="mb-4 text-2xl font-bold ">
+              <h2 className="mb-4 text-2xl font-['SpaceGrotesk'] ">
                 Ready to Get Started?
               </h2>
               <form id="contactForm" onSubmit={handleSubmit}>
