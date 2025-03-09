@@ -4,7 +4,7 @@ import WhyChoosen from "./components/WhyChoosen";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import ContactForm from "./components/ContactForm";
-import Knowmore from "./components/Knowmore";
+// import Knowmore from "./components/Knowmore";
 import ScrollToTop from "./components/ScrollToTop";
 import LoadingAnimation from "./components/LoadingAnimation";
 
@@ -17,7 +17,7 @@ export default function Home() {
       <WhatWeOffer/>
       <WhatOurClientSay/>
       <WhyChoosen/>
-      <Knowmore/>
+      {/* <Knowmore/> */}
       <ContactForm/>
       <ScrollToTop/>
     </div>
