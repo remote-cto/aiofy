@@ -28,7 +28,7 @@ const LoadingAnimation = () => {
         <div className="absolute top-6 left-6 w-12 h-12 rounded-full bg-gradient-to-br from-yellow-200 to-yellow-500 animate-pulse"></div>
 
         {/* Text below */}
-        <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-yellow-500 font-bold text-lg">
+        <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 text-yellow-500 font-bold text-lg font-['SpaceGrotesk']">
           Loading...
         </div>
       </div>
