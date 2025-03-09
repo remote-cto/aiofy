@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
         <div className="flex items-stretch justify-center">
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
-              <p className="mt-3 mb-12 text-lg text-gray-900">
+              <p className="mt-3 mb-12 text-lg text-gray-900 font-['Montserrat']">
                 className aptent taciti sociosqu ad litora torquent per conubia
                 nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
                 scelerisque sagittis ante, ac tincidunt sem venenatis ut.

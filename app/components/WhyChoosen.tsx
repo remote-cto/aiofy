@@ -13,8 +13,12 @@ const BenefitItem: React.FC<BenefitItemProps> = ({
 }) => (
   <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
     <div className="mb-4 text-black">{icon}</div>
-    <h3 className="text-xl font-bold mb-2 text-gray-800">{title}</h3>
-    <p className="text-gray-600 text-center">{description}</p>
+    <div className="mb-2">
+      <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+    </div>
+    <div className="text-center">
+      <p className="text-gray-600 font-['Montserrat']">{description}</p>
+    </div>
   </div>
 );
 
@@ -159,16 +163,12 @@ const WhyChoosen: React.FC = () => {
     <div className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          {/* <h2 className="text-4xl font-extrabold text-black mb-4">
-            Why Choose Nirvana.AI?
-          </h2> */}
-
-          <h2 className="mb-4 font-bold text-3xl  sm:text-5xl font-['SpaceGrotesk']">
-          Why Choose <span className="text-[#FFBF23]">Nirvana.AI</span>
+          <h2 className="mb-4 font-bold text-3xl sm:text-6xl font-['SpaceGrotesk']">
+            Why Choose <span className="text-[#FFBF23]">Nirvana.AI</span>
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {benefits.map((benefit, index) => (
             <BenefitItem
               key={index}

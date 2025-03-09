@@ -67,7 +67,7 @@ const WhatOurClientsSay: React.FC = () => {
     <div className="bg-[#FFBF23] py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl  sm:text-5xl text-black mb-4 flex items-center justify-center font-['SpaceGrotesk']">
+          <h2 className="text-3xl  sm:text-6xl text-black mb-4 flex items-center justify-center font-['SpaceGrotesk']">
            
             What Our Clients Say
           </h2>

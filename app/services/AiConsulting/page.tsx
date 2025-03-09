@@ -28,7 +28,7 @@ const Page = () => {
           <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center font-['SpaceGrotesk']">
             AI Consulting – Strategic Intelligence That Transforms
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-['Montserrat']">
             AI is not just about technology; it's about strategy. At Nirvana.AI, we integrate AI into your business model to drive <span className="font-bold">intelligent automation, predictive analytics,</span> and <span className="font-bold">enhanced decision-making</span>. Our approach is not just consultative—it's transformative.
           </p>
         </header>
@@ -101,7 +101,7 @@ const Page = () => {
 
         {/* Footer */}
         <footer className="bg-[#FFBF23] text-black py-8 px-4">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center font-['Montserrat']">
             <p className="text-lg">
               Transform your business with next-generation AI Consulting
             </p>

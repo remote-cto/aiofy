@@ -28,7 +28,7 @@ const Page = () => {
           <h2 className="text-3xl  sm:text-5xl text-[#] mb-4 flex items-center justify-center font-['SpaceGrotesk']">
             Generative AI Solutions – Redefining Innovation and Automation
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-['Montserrat']">
             Go beyond traditional AI capabilities with our{" "}
             <span className="font-bold">Generative AI Solutions</span>—designed
             to{" "}
@@ -134,7 +134,7 @@ const Page = () => {
 
         {/* Footer */}
         <footer className="bg-[#FFBF23] text-black py-8 px-4">
-          <div className="max-w-6xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center font-['Montserrat']">
             <p className="text-lg">
               Transform your business with next-generation Generative AI
               Solutions

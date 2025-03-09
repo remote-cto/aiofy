@@ -87,7 +87,7 @@ const ServicesPage = () => {
       <div className="container mx-auto px-4">
         <motion.h1
           variants={titleVariants}
-          className="text-center text-3xl md:text-5xl font-extrabold mb-14  tracking-tight font-['SpaceGrotesk']"
+          className="text-center text-3xl md:text-6xl font-extrabold mb-14  tracking-tight font-['SpaceGrotesk']"
         >
           Our <span className="text-[#FFBF23]">Services</span>
         </motion.h1>
@@ -123,7 +123,7 @@ const ServicesPage = () => {
                 <h2 className="text-xl font-bold text-black mb-3">
                   {service.title}
                 </h2>
-                <p className="text-gray-700 leading-relaxed mb-4 flex-grow">
+                <p className="text-gray-700 leading-relaxed mb-4 flex-grow font-['Montserrat']">
                   {service.description}
                 </p>
                 <div className="mt-auto">

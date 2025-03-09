@@ -11,10 +11,10 @@ const About = () => {
       <div className="sm:w-1/2 p-5">
         <div className="text">
           
-          <h2 className="my-4 font-bold text-3xl  sm:text-5xl font-['SpaceGrotesk']">
+          <h2 className="my-4 font-bold text-3xl  sm:text-6xl font-['SpaceGrotesk']">
             About <span className="text-[#FFBF23]">Our Company</span>
           </h2>
-          <p className="text-gray-700 ">
+          <p className="text-gray-700 font-['Montserrat']">
             At Nirvana.AI, we are your partners in navigating the AI revolution.
             As a leading AI consulting company, we specialize in transforming
             businesses through Advanced AI consulting, Custom AI model training,
