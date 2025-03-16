@@ -28,7 +28,7 @@ const Page = () => {
           <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center font-['SpaceGrotesk']">
             AI Model Training – Precision Engineering for Intelligent Systems
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-['Montserrat']">
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
             The heart of every AI solution is a well-trained model. Our AI Model Training services focus on <span className="font-bold">accuracy, speed,</span> and <span className="font-bold">scalability</span> to build models that not only understand data but also <span className="font-bold">anticipate trends</span> and make actionable predictions.
           </p>
         </header>

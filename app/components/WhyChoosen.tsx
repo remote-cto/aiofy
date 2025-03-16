@@ -17,7 +17,7 @@ const BenefitItem: React.FC<BenefitItemProps> = ({
       <h3 className="text-xl font-bold text-gray-800">{title}</h3>
     </div>
     <div className="text-center">
-      <p className="text-gray-600 font-['Montserrat']">{description}</p>
+      <p className="text-gray-600">{description}</p>
     </div>
   </div>
 );

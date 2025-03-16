@@ -91,8 +91,8 @@ const WhatOurClientsSay: React.FC = () => {
                         {testimonial.author.charAt(0)}
                       </div>
                       <div className="ml-4">
-                        <p className="font-bold text-black font-['SpaceGrotesk'] ">{testimonial.author}</p>
-                        <p className="text-black font-['Montserrat']">{testimonial.position}, {testimonial.company}</p>
+                        <p className="font-bold text-black">{testimonial.author}</p>
+                        <p className="text-black">{testimonial.position}, {testimonial.company}</p>
                       </div>
                     </div>
                   </div>
@@ -116,7 +116,7 @@ const WhatOurClientsSay: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="px-8 py-3 bg-white text-indigo-800 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex mx-auto items-center font-['SpaceGrotesk']">
+          <button className="px-8 py-3 bg-white text-indigo-800 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex mx-auto items-center">
             Read More Success Stories
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

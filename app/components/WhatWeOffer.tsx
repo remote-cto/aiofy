@@ -123,7 +123,7 @@ const ServicesPage = () => {
                 <h2 className="text-xl font-bold text-black mb-3">
                   {service.title}
                 </h2>
-                <p className="text-gray-700 leading-relaxed mb-4 flex-grow font-['Montserrat']">
+                <p className="text-gray-700 leading-relaxed mb-4 flex-grow">
                   {service.description}
                 </p>
                 <div className="mt-auto">
@@ -137,7 +137,7 @@ const ServicesPage = () => {
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center justify-center bg-[#FFBF23] text-black py-2 rounded-lg  transition-colors duration-300 ease-in-out"
                     >
-                      <span className="mr-2 font-['SpaceGrotesk']">Know More</span>
+                      <span className="mr-2">Know More</span>
 
                       <motion.span
                         initial={{ x: 0 }}

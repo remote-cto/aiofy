@@ -269,7 +269,7 @@ const ContactForm: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex mx-auto items-center font-['SpaceGrotesk'] ${
+                    className={`px-8 py-3 bg-white text-black font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex mx-auto items-center ${
                       isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                     }`}
                   >
