@@ -54,21 +54,21 @@ const ServicesPage = () => {
 
   const services = [
     {
-      image: "/images/ManagedIT.jpg",
+      image: "/images/AiConsulting.png",
       title: "AI Consulting",
       description:
         "Gain a competitive edge with our AI Consulting services. Our experts dive deep into your business challenges, identifying opportunities to integrate AI seamlessly. We design strategic AI roadmaps that are practical, scalable, and result-driven—helping you move from concept to execution with confidence. We provide strategic AI consulting to help businesses identify opportunities, overcome challenges, and implement AI-driven solutions. From ideation to execution, our experts work with you to create a roadmap that aligns with your goals.",
       link: "/services/AiConsulting",
     },
     {
-      image: "/images/ManagedIT.jpg",
+      image: "/images/AiModelTraining.png",
       title: "AI Model Training",
       description:
         "Empower your AI systems with precision. We offer end-to-end AI model training, leveraging state-of-the-art techniques and datasets to ensure your models are not just intelligent but also accurate and efficient. From supervised to unsupervised learning, we cover it all. Our team designs, trains, and deploys custom AI models tailored to your specific needs. Whether it’s predictive analytics, natural language processing, or computer vision, we ensure your models are accurate, scalable, and future-ready.",
       link: "/services/AiModelTraining",
     },
     {
-      image: "/images/ManagedIT.jpg",
+      image: "/images/GenAI.png",
       title: "Generative AI Solutions",
       description:
         "Reimagine what’s possible with our GEN AI solutions. From AI-driven content creation to automated code generation, our generative models push the boundaries of innovation. Transform how you interact, create, and communicate with AI capabilities designed for the future. Unlock creativity and efficiency with our Generative AI solutions. From content creation to design automation, we help you leverage the power of AI to generate innovative ideas, streamline workflows, and deliver exceptional results. ",
