@@ -87,7 +87,7 @@ const ServicesPage = () => {
       <div className="container mx-auto px-4">
         <motion.h1
           variants={titleVariants}
-          className="text-center text-3xl md:text-6xl font-extrabold mb-14  tracking-tight font-['SpaceGrotesk']"
+          className="text-center text-3xl md:text-6xl font-extrabold mb-14  tracking-tight "
         >
           Our <span className="text-[#FFBF23]">Services</span>
         </motion.h1>

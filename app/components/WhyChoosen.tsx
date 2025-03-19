@@ -163,7 +163,7 @@ const WhyChoosen: React.FC = () => {
     <div className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="mb-4 font-bold text-3xl sm:text-6xl font-['SpaceGrotesk']">
+          <h2 className="mb-4 font-bold text-3xl sm:text-6xl ">
             Why Choose <span className="text-[#FFBF23]">Nirvana.AI</span>
           </h2>
         </div>

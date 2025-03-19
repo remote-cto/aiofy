@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold">Nirvana.AI</h1>
-              <p className="text-xs text-gray-800 font-['SpaceGrotesk']">
+              <p className="text-xs text-gray-800 ">
                 Building Intelligent AI Solutions{" "}
               </p>
             </div>
@@ -76,19 +76,19 @@ const Navbar: React.FC = () => {
               href="/"
               className="text-gray-900 hover:text-gray-900 relative group"
             >
-              <span className="font-['SpaceGrotesk']">Home</span>
+              <span className="">Home</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
               href="/contact"
               className="text-gray-900 hover:text-gray-900 relative group"
             >
-              <span className="font-['SpaceGrotesk']">Contact</span>
+              <span className="">Contact</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
             <button
               onClick={scrollToServices}
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md font-['SpaceGrotesk']"
+              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md "
             >
               Get Started
             </button>
@@ -135,7 +135,7 @@ const Navbar: React.FC = () => {
         >
           <div className="p-6">
             <div className="flex justify-between items-center mb-8">
-              <h2 className="text-xl font-bold font-['SpaceGrotesk']">Menu</h2>
+              <h2 className="text-xl font-bold">Menu</h2>
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="text-gray-700 hover:text-gray-900 focus:outline-none"
@@ -158,20 +158,20 @@ const Navbar: React.FC = () => {
             <div className="flex flex-col space-y-4 ">
               <a
                 href="/"
-                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300 font-['SpaceGrotesk']"
+                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300 "
               >
                 Home
               </a>
               <a
                 href="/contact"
-                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300 font-['SpaceGrotesk']"
+                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300 "
               >
                 Contact
               </a>
               <div className="pt-4">
                 <button
                   onClick={scrollToServices}
-                  className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-4 rounded-md w-full transition-all duration-300 shadow-sm hover:shadow font-['SpaceGrotesk']"
+                  className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-4 rounded-md w-full transition-all duration-300 shadow-sm hover:shadow"
                 >
                   Get Started
                 </button>
