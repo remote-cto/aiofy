@@ -7,12 +7,14 @@ import ContactForm from "./components/ContactForm";
 // import Knowmore from "./components/Knowmore";
 import ScrollToTop from "./components/ScrollToTop";
 import LoadingAnimation from "./components/LoadingAnimation";
+import PromptSection from "./components/PromptSection";
 
 export default function Home() {
   return (
     <div>
       <LoadingAnimation/>
       <Navbar/>
+      <PromptSection/>
       <About/>
       <WhatWeOffer/>
       <WhatOurClientSay/>
