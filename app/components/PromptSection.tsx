@@ -212,7 +212,7 @@ const PromptSection = () => {
         {submitted && (
           <div>
             <div className="p-4 bg-green-100 text-green-700 rounded-lg mb-6">
-              Analysis complete for {formData.website}!
+              Analysis complete for {formData.website}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
