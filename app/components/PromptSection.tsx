@@ -20,6 +20,7 @@ const PromptSection = () => {
   const [loading, setLoading] = useState(false);
   const [useCases, setUseCases] = useState<AIUseCase[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [emailSent, setEmailSent] = useState(false);
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -61,10 +62,11 @@ const PromptSection = () => {
     return title.charAt(0).toUpperCase() + title.slice(1);
   };
 
-  const fetchAIUseCases = async (website: string) => {
+  const fetchAIUseCases = async (website: string, email: string) => {
     try {
       setLoading(true);
       setError(null);
+      setEmailSent(false);
       
       // API call to ChatGPT
       const response = await fetch('/api/generateUsecase', {
@@ -73,7 +75,9 @@ const PromptSection = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          prompt: `Analyse the website ${website} in real time and list three innovative, practical, and relevant AI use cases for this company that can drive significant growth to the business. Only list the three AI use cases without any additional explanation.`
+          prompt: `Analyse the website ${website} in real time and list three innovative, practical, and relevant AI use cases for this company that can drive significant growth to the business. Only list the three AI use cases without any additional explanation.`,
+          website: website,
+          email: email
         }),
       });
 
@@ -83,14 +87,9 @@ const PromptSection = () => {
 
       const data = await response.json();
       
-      // Convert API response to our interface format with meaningful titles
-      const formattedUseCases = data.useCases.map((useCase: string, index: number) => ({
-        id: index + 1,
-        title: extractUseCaseTitle(useCase),
-        description: useCase,
-      }));
-
-      setUseCases(formattedUseCases);
+      // Set the use cases from the response
+      setUseCases(data.useCases);
+      setEmailSent(true);
       
     } catch (error) {
       console.error('Error fetching AI use cases:', error);
@@ -129,7 +128,7 @@ const PromptSection = () => {
     console.log("Form data submitted:", formData);
     
     // Get AI-generated use cases
-    await fetchAIUseCases(formData.website);
+    await fetchAIUseCases(formData.website, formData.email);
     setSubmitted(true);
   };
 
@@ -206,7 +205,8 @@ const PromptSection = () => {
               </div>
             ) : (
               <div className="p-4 bg-green-100 text-green-700 rounded-lg mb-6">
-                AI Use Case Analysis complete for {formData.website}
+                <p>AI Use Case Analysis complete for {formData.website}</p>
+                {/* {emailSent && <p className="mt-2">Results have been emailed to our team.</p>} */}
               </div>
             )}
 
