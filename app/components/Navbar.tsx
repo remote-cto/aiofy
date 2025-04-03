@@ -50,20 +50,19 @@ const Navbar: React.FC = () => {
     <>
       <nav className="bg-white py-4 px-6 relative z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-3">
-            <div className=" h-15 w-15 lg:h-25 lg:w-22 rounded-lg flex items-center justify-center">
+          <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center">
               <Image
-                src="/images/aiofyLogo.jpg" 
-                width={150} 
-                height={150}
-                className="text-white"
+                src="/images/aiofyLogo.png"
+                width={60}
+                height={60}
+                className="object-contain"
                 alt="Company Logo"
               />
             </div>
-            <div>
-              {/* <h1 className="text-xl font-bold">AIOFY</h1> */}
-              <p className="text-xs lg:text-sm text-gray-800 ">
-              Making your business , AI-enabled{" "}
+            <div className="flex flex-col justify-center">
+              <p className="text-xs lg:text-sm text-gray-800">
+                Making your business, AI-enabled
               </p>
             </div>
           </div>
@@ -85,7 +84,7 @@ const Navbar: React.FC = () => {
             </a>
             <button
               onClick={scrollToServices}
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md "
+              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
             >
               Get Started
             </button>
@@ -155,13 +154,13 @@ const Navbar: React.FC = () => {
             <div className="flex flex-col space-y-4 ">
               <a
                 href="/"
-                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300 "
+                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
               >
                 Home
               </a>
               <a
                 href="/contact"
-                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300 "
+                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
               >
                 Contact
               </a>
