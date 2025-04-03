@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const Navbar: React.FC = () => {
@@ -50,21 +51,17 @@ const Navbar: React.FC = () => {
       <nav className="bg-white py-4 px-6 relative z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
-            <div className="h-12 w-12 bg-black rounded-lg flex items-center justify-center">
-              <svg
-                className="h-8 w-8 text-white"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-                  fill="currentColor"
-                />
-              </svg>
+            <div className=" h-15 w-15 lg:h-25 lg:w-22 rounded-lg flex items-center justify-center">
+              <Image
+                src="/images/aiofyLogo.jpg" 
+                width={150} 
+                height={150}
+                className="text-white"
+                alt="Company Logo"
+              />
             </div>
             <div>
-              <h1 className="text-xl font-bold">Nirvana.AI</h1>
+              <h1 className="text-xl font-bold">AIOFY</h1>
               <p className="text-xs text-gray-800 ">
                 Building Intelligent AI Solutions{" "}
               </p>
