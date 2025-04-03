@@ -47,136 +47,138 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <>
-      <nav className="bg-white py-4 px-6 relative z-50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center">
-              <Image
-                src="/images/aiofyLogo.png"
-                width={60}
-                height={60}
-                className="object-contain"
-                alt="Company Logo"
-              />
-            </div>
-            <div className="flex flex-col justify-center">
-              <p className="text-xs lg:text-sm text-gray-800">
-                Making your business, AI-enabled
-              </p>
-            </div>
+    <nav className="bg-white py-4 px-6 relative z-50">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        {/* Logo and Slogan Container */}
+        <div className="flex items-center space-x-4 flex-grow">
+          {/* Logo Section */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/images/aiofyLogo.png"
+              width={90}
+              height={1}
+              alt="aiofy logo"
+              className="object-contain"
+            />
           </div>
 
-          <div className="hidden md:flex items-center space-x-6">
+          {/* Slogan Image - Next to logo */}
+          <div className="">
+            <Image
+              src="/images/slogan.jpg"
+              width={230}
+              height={80}
+              alt="Making Your Business AI-Enabled"
+              className="object-contain"
+            />
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="hidden md:flex items-center space-x-6">
+          <a href="/" className="text-gray-900 hover:text-gray-900">
+            Home
+          </a>
+          <a href="/contact" className="text-gray-900 hover:text-gray-900">
+            Contact
+          </a>
+          <button
+            onClick={scrollToServices}
+            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md"
+          >
+            Get Started
+          </button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-700 hover:text-gray-900 focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <div className="w-6 h-6 relative">
+              <span
+                className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
+                  isMenuOpen ? "rotate-45 top-3" : "rotate-0 top-1"
+                }`}
+              ></span>
+              <span
+                className={`absolute h-0.5 w-6 bg-gray-800 top-3 transition-all duration-200 ${
+                  isMenuOpen ? "opacity-0" : "opacity-100"
+                }`}
+              ></span>
+              <span
+                className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
+                  isMenuOpen ? "-rotate-45 top-3" : "rotate-0 top-5"
+                }`}
+              ></span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      ></div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed right-0 top-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="p-6">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-xl font-bold">Menu</h2>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-700 hover:text-gray-900 focus:outline-none"
+            >
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div className="flex flex-col space-y-4">
             <a
               href="/"
-              className="text-gray-900 hover:text-gray-900 relative group"
+              className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
             >
-              <span className="">Home</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+              Home
             </a>
             <a
               href="/contact"
-              className="text-gray-900 hover:text-gray-900 relative group"
+              className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
             >
-              <span className="">Contact</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+              Contact
             </a>
-            <button
-              onClick={scrollToServices}
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
-            >
-              Get Started
-            </button>
-          </div>
-
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-700 hover:text-gray-900 focus:outline-none w-10 h-10 flex items-center justify-center relative"
-              aria-label="Toggle menu"
-            >
-              <div className="w-6 h-6 relative">
-                <span
-                  className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "rotate-45 top-3" : "rotate-0 top-1"
-                  }`}
-                ></span>
-                <span
-                  className={`absolute h-0.5 w-6 bg-gray-800 top-3 transition-all duration-200 ${
-                    isMenuOpen ? "opacity-0" : "opacity-100"
-                  }`}
-                ></span>
-                <span
-                  className={`absolute h-0.5 w-6 bg-gray-800 transform transition-all duration-300 ease-in-out ${
-                    isMenuOpen ? "-rotate-45 top-3" : "rotate-0 top-5"
-                  }`}
-                ></span>
-              </div>
-            </button>
-          </div>
-        </div>
-
-        <div
-          className={`md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300 ${
-            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
-          onClick={() => setIsMenuOpen(false)}
-        ></div>
-
-        <div
-          className={`md:hidden fixed right-0 top-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="p-6">
-            <div className="flex justify-between items-center mb-8">
-              <h2 className="text-xl font-bold">Menu</h2>
+            <div className="pt-4">
               <button
-                onClick={() => setIsMenuOpen(false)}
-                className="text-gray-700 hover:text-gray-900 focus:outline-none"
+                onClick={scrollToServices}
+                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-4 rounded-md w-full"
               >
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+                Get Started
               </button>
             </div>
-            <div className="flex flex-col space-y-4 ">
-              <a
-                href="/"
-                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
-              >
-                Home
-              </a>
-              <a
-                href="/contact"
-                className="text-gray-800 hover:text-gray-900 py-2 border-b border-gray-100 hover:border-yellow-400 transition-colors duration-300"
-              >
-                Contact
-              </a>
-              <div className="pt-4">
-                <button
-                  onClick={scrollToServices}
-                  className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-4 rounded-md w-full transition-all duration-300 shadow-sm hover:shadow"
-                >
-                  Get Started
-                </button>
-              </div>
-            </div>
           </div>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 };
 
