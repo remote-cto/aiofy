@@ -61,9 +61,9 @@ const Navbar: React.FC = () => {
               />
             </div>
             <div>
-              <h1 className="text-xl font-bold">AIOFY</h1>
-              <p className="text-xs text-gray-800 ">
-                Building Intelligent AI Solutions{" "}
+              {/* <h1 className="text-xl font-bold">AIOFY</h1> */}
+              <p className="text-xs lg:text-sm text-gray-800 ">
+              Making your business , AI-enabled{" "}
               </p>
             </div>
           </div>
