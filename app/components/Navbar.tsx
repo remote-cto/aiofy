@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
           <div className="">
             <Image
               src="/images/slogan.jpg"
-              width={230}
+              width={350}
               height={80}
               alt="Making Your Business AI-Enabled"
               className="object-contain"
