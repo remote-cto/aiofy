@@ -134,7 +134,9 @@ const PromptSection = () => {
 
   return (
     <div className="lg:max-w-screen-xl mx-auto">
+      <h1 className=" text-xl lg:text-3xl text-center mt-10">How can AI help your business? See right now.</h1>
       <div className="p-5 bg-white rounded-lg shadow-sm mb-8">
+        
         <form onSubmit={handleSubmit} className="mb-6">
           <div className="flex flex-col md:flex-row gap-4 md:items-start">
             <div className="flex-grow">
@@ -216,16 +218,29 @@ const PromptSection = () => {
               </div>
             ) : (
               useCases.length > 0 && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {useCases.map((useCase) => (
-                    <div
-                      key={useCase.id}
-                      className="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                <div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    {useCases.map((useCase) => (
+                      <div
+                        key={useCase.id}
+                        className="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                      >
+                        <h3 className="font-bold text-lg mb-2">{useCase.title}</h3>
+                        <p className="text-gray-700">{useCase.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Contact CTA section */}
+                  <div className="mt-8 p-5 bg-yellow-50 rounded-lg border border-yellow-300 text-center">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">We can get this done for you. FAST!</h3>
+                    <a 
+                      href="/contact" 
+                      className="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
                     >
-                      <h3 className="font-bold text-lg mb-2">{useCase.title}</h3>
-                      <p className="text-gray-700">{useCase.description}</p>
-                    </div>
-                  ))}
+                      Contact Today
+                    </a>
+                  </div>
                 </div>
               )
             )}
