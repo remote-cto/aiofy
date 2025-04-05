@@ -150,7 +150,7 @@ const PromptSection = () => {
           HOW CAN AI HELP <span className="relative text-blue-900">YOUR BUSINESS
             <span className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 w-full transform transition-all duration-500 ${isAnimating ? 'scale-x-100' : 'scale-x-0'}`}></span>
           </span>? SEE RIGHT NOW 
-          <span className="text-yellow-500 h-[45px]">👇</span>
+          <span className="text-yellow-500 h-[45px]">⬇️</span>
         </span>
       </h1>
       <div className="p-5 bg-white rounded-lg shadow-sm mb-8">
