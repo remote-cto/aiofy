@@ -67,11 +67,11 @@ const WhatOurClientsSay: React.FC = () => {
     <div className="bg-[#FFBF23] py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl  sm:text-6xl text-black mb-4 flex items-center justify-center font-bold">
+          <h2 className="text-3xl  sm:text-6xl text-blue-900 mb-4 flex items-center justify-center font-bold">
            
             What Our Clients Say
           </h2>
-          <div className="w-24 h-1 bg-indigo-400 mx-auto rounded-full mb-6"></div>
+          <div className="w-24 h-1 bg-black mx-auto rounded-full mb-6"></div>
         </div>
 
         <div className="relative">
@@ -115,14 +115,7 @@ const WhatOurClientsSay: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <button className="px-8 py-3 bg-white text-indigo-800 font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex mx-auto items-center">
-            Read More Success Stories
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </button>
-        </div>
+        
       </div>
     </div>
   );

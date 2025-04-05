@@ -154,12 +154,13 @@ const PromptSection = () => {
   return (
     <div className="lg:max-w-screen-xl mx-auto">
       <h1 
-        className="text-xl lg:text-3xl text-center mt-10 transition-all duration-300 cursor-pointer"
+        className="text-xl lg:text-3xl  mt-10 transition-all duration-300 cursor-pointer"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <span className={`bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent inline-block ${isAnimating ? 'animate-pulse' : ''}`}>
-          How can AI help your business? See right now.
+        <span className={`bg-blue-900 bg-clip-text font-bold text-transparent inline-block ${isAnimating ? 'animate-pulse' : ''}`}>
+          HOW CAN AI HELP YOUR BUSINESS? SEE RIGHT NOW 
+          <span className="text-yellow-500 h-[45px]">👇</span>
         </span>
         <span className={`block h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mt-1 transform transition-all duration-500 ${isAnimating ? 'scale-x-100' : 'scale-x-0'}`}></span>
       </h1>
@@ -218,7 +219,7 @@ const PromptSection = () => {
             <div className="w-full md:w-auto mt-2 md:mt-8">
               <button
                 type="submit"
-                className="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full md:w-auto bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-medium py-2 px-4 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={loading}
               >
                 {loading ? "Analyzing..." : "Submit"}
@@ -234,7 +235,7 @@ const PromptSection = () => {
                 {error}
               </div>
             ) : (
-              <div className="p-4 bg-green-100 text-green-700 rounded-lg mb-6">
+              <div className="p-4 bg-yellow-50 rounded-lg  border-yellow-300 mb-6">
                 <p>AI Use Case Analysis complete for {formData.website}</p>
                 {/* {emailSent && <p className="mt-2">Results have been emailed to our team.</p>} */}
               </div>
@@ -260,13 +261,13 @@ const PromptSection = () => {
                   </div>
                   
                   {/* Contact CTA section */}
-                  <div className="mt-8 p-5 bg-yellow-50 rounded-lg border border-yellow-300 text-center">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">We can get this done for you. FAST!</h3>
+                  <div className="mt-8 p-5 bg-yellow-50 rounded-lg  border-yellow-300 text-center">
+                    <h3 className="text-5xl font-bold text-blue-900 mb-2">We can get this done for you. FAST!</h3>
                     <a 
                       href="/contact" 
-                      className="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
+                      className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-medium py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
                     >
-                      Contact Today
+                      Contact NOW
                     </a>
                   </div>
                 </div>

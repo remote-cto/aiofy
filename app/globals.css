@@ -136,3 +136,16 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Switzer-Bold';
+  src: url('/Font/Switzer-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Switzer-Regular';
+  src: url('/Font/Switzer-Regular.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

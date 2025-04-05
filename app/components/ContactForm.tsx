@@ -153,7 +153,7 @@ const ContactForm: React.FC = () => {
           className="mb-8"
         >
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-6xl">
+            <h2 className="font-heading mb-4 font-bold tracking-tight text-blue-900 text-3xl sm:text-6xl">
               Get in Touch
             </h2>
             <p className="text-gray-700 md:text-lg">
@@ -171,7 +171,7 @@ const ContactForm: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="h-full pr-0 md:pr-6 flex flex-col justify-center"
             >
-              <h3 className="text-2xl font-bold mb-6 text-gray-900">
+              <h3 className="text-2xl font-bold mb-6 text-blue-900">
                 Contact Information
               </h3>
               <ul className="space-y-6 md:mb-0">
@@ -282,7 +282,7 @@ const ContactForm: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="bg-white shadow-xl rounded-xl p-6 md:p-8"
             >
-              <h2 className="mb-6 text-2xl font-bold text-gray-900">
+              <h2 className="mb-6 text-2xl font-bold text-blue-900">
                 Send Us a Message
               </h2>
               <form

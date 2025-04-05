@@ -12,9 +12,9 @@ const BenefitItem: React.FC<BenefitItemProps> = ({
   icon,
 }) => (
   <div className="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105">
-    <div className="mb-4 text-black">{icon}</div>
+    <div className="mb-4 text-blue-900">{icon}</div>
     <div className="mb-2">
-      <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+      <h3 className="text-xl font-bold text-blue-900">{title}</h3>
     </div>
     <div className="text-center">
       <p className="text-gray-600">{description}</p>
@@ -163,8 +163,8 @@ const WhyChoosen: React.FC = () => {
     <div className="bg-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="mb-4 font-bold text-3xl sm:text-6xl ">
-            Why Choose <span className="text-[#FFBF23]">Nirvana.AI</span>
+          <h2 className="mb-4 font-bold text-3xl sm:text-6xl text-blue-900 ">
+            Why Choose <span className="text-[#FFBF23]">AIofy</span>
           </h2>
         </div>
 

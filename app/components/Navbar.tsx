@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0">
             <Image
               src="/images/aiofyLogo.png"
-              width={90}
+              width={120}
               height={1}
               alt="aiofy logo"
               className="object-contain"
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
           <div className="">
             <Image
               src="/images/slogan.jpg"
-              width={350}
+              width={400}
               height={80}
               alt="Making Your Business AI-Enabled"
               className="object-contain"
@@ -76,15 +76,15 @@ const Navbar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-6">
-          <a href="/" className="text-gray-900 hover:text-gray-900">
+          <a href="/" className="text-blue-900">
             Home
           </a>
-          <a href="/contact" className="text-gray-900 hover:text-gray-900">
+          <a href="/contact" className="text-blue-900">
             Contact
           </a>
           <button
             onClick={scrollToServices}
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium py-2 px-6 rounded-md"
+            className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-medium py-2 px-6 rounded-md"
           >
             Get Started
           </button>

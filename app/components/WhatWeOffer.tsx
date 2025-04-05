@@ -61,7 +61,7 @@ const ServicesPage = () => {
       link: "/services/AiConsulting",
     },
     {
-      image: "/images/AiModelTraining.png",
+      image: "/images/ModelTraining.jpg",
       title: "AI Model Training",
       description:
         "Empower your AI systems with precision. We offer end-to-end AI model training, leveraging state-of-the-art techniques and datasets to ensure your models are not just intelligent but also accurate and efficient. From supervised to unsupervised learning, we cover it all. Our team designs, trains, and deploys custom AI models tailored to your specific needs. Whether it’s predictive analytics, natural language processing, or computer vision, we ensure your models are accurate, scalable, and future-ready.",
@@ -87,7 +87,7 @@ const ServicesPage = () => {
       <div className="container mx-auto px-4">
         <motion.h1
           variants={titleVariants}
-          className="text-center text-3xl md:text-6xl font-extrabold mb-14  tracking-tight "
+          className="text-center text-3xl md:text-6xl font-extrabold mb-14 text-blue-900 tracking-tight "
         >
           Our <span className="text-[#FFBF23]">Services</span>
         </motion.h1>
@@ -120,7 +120,7 @@ const ServicesPage = () => {
                 </motion.div>
               </div>
               <div className="p-6 flex-grow flex flex-col">
-                <h2 className="text-xl font-bold text-black mb-3">
+                <h2 className="text-xl font-bold text-blue-900 mb-3">
                   {service.title}
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-4 flex-grow">
@@ -135,7 +135,7 @@ const ServicesPage = () => {
                     <motion.div
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="flex items-center justify-center bg-[#FFBF23] text-black py-2 rounded-lg  transition-colors duration-300 ease-in-out"
+                      className="flex items-center justify-center bg-[#FFBF23] text-blue-900 py-2 rounded-lg  transition-colors duration-300 ease-in-out"
                     >
                       <span className="mr-2">Know More</span>
 
