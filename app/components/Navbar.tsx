@@ -55,10 +55,10 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0">
             <Image
               src="/images/aiofyLogo.png"
-              width={120}
+              width={150}
               height={1}
               alt="aiofy logo"
-              className="object-contain"
+              className="object-contain max-w-[100px] lg:max-w-[150px]"
             />
           </div>
 

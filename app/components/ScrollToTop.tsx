@@ -33,7 +33,7 @@ const ScrollToTop = () => {
     <div className={`fixed bottom-4 right-2 z-50 transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       <button
         onClick={scrollToTop}
-        className="bg-black text-[#FFBF23] p-3 rounded-full shadow-lg"
+        className="bg-blue-900 text-[#FFBF23] p-3 rounded-full shadow-lg"
         aria-label="Scroll to top"
       >
         <ArrowUp size={24} />
