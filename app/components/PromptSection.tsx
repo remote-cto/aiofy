@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface AIUseCase {
   id: number;
@@ -21,6 +21,25 @@ const PromptSection = () => {
   const [useCases, setUseCases] = useState<AIUseCase[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [emailSent, setEmailSent] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    // Start the animation automatically every few seconds
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => setIsAnimating(false), 2000);
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleMouseEnter = () => {
+    setIsAnimating(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsAnimating(false);
+  };
 
   const validateEmail = (email: string): boolean => {
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -134,7 +153,16 @@ const PromptSection = () => {
 
   return (
     <div className="lg:max-w-screen-xl mx-auto">
-      <h1 className=" text-xl lg:text-3xl text-center mt-10">How can AI help your business? See right now.</h1>
+      <h1 
+        className="text-xl lg:text-3xl text-center mt-10 transition-all duration-300 cursor-pointer"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <span className={`bg-gradient-to-r from-yellow-500 to-yellow-800 bg-clip-text text-transparent inline-block ${isAnimating ? 'animate-pulse' : ''}`}>
+          How can AI help your business? See right now.
+        </span>
+        <span className={`block h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mt-1 transform transition-all duration-500 ${isAnimating ? 'scale-x-100' : 'scale-x-0'}`}></span>
+      </h1>
       <div className="p-5 bg-white rounded-lg shadow-sm mb-8">
         
         <form onSubmit={handleSubmit} className="mb-6">
