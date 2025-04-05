@@ -91,7 +91,7 @@ const WhatOurClientsSay: React.FC = () => {
                         {testimonial.author.charAt(0)}
                       </div>
                       <div className="ml-4">
-                        <p className="font-bold text-black">{testimonial.author}</p>
+                        <p className="font-bold text-blue-900">{testimonial.author}</p>
                         <p className="text-black">{testimonial.position}, {testimonial.company}</p>
                       </div>
                     </div>

@@ -16,8 +16,8 @@ const About = () => {
           <h2 className="my-4 font-bold text-3xl text-blue-900 sm:text-6xl">
             About <span className="text-[#FFBF23]">Our Company</span>
           </h2>
-          <p className="text-gray-700">
-            At AIofy, we are your partners in navigating the AI revolution.
+          <p className="text-black">
+            At <span className="text-blue-900">AIofy</span>, we are your partners in navigating the AI revolution.
             As a leading AI consulting company, we specialize in transforming
             businesses through Advanced AI consulting, Custom AI model training,
             and Building cutting-edge Generative AI solutions. Our mission is

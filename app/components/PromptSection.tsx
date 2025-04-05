@@ -69,18 +69,6 @@ const PromptSection = () => {
     }
   };
 
-  const extractUseCaseTitle = (description: string): string => {
-    // Extract first few words to create a meaningful title
-    const firstSentence = description.split(".")[0];
-    // Limit to first 5-7 words for a concise title
-    const words = firstSentence.split(" ");
-    const titleWords = words.slice(0, Math.min(5, words.length));
-    const title = titleWords.join(" ");
-    
-    // Capitalize first letter
-    return title.charAt(0).toUpperCase() + title.slice(1);
-  };
-
   const fetchAIUseCases = async (website: string, email: string) => {
     try {
       setLoading(true);
@@ -255,7 +243,7 @@ const PromptSection = () => {
                         key={useCase.id}
                         className="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                       >
-                        <h3 className="font-bold text-lg mb-2">{useCase.title}</h3>
+                        <h3 className="font-bold text-lg mb-2 text-blue-900">Use Case {useCase.id}</h3>
                         <p className="text-gray-700">{useCase.description}</p>
                       </div>
                     ))}

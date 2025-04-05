@@ -17,7 +17,7 @@ const BenefitItem: React.FC<BenefitItemProps> = ({
       <h3 className="text-xl font-bold text-blue-900">{title}</h3>
     </div>
     <div className="text-center">
-      <p className="text-gray-600">{description}</p>
+      <p className="text-black">{description}</p>
     </div>
   </div>
 );

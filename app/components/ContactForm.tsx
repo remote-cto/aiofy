@@ -107,7 +107,7 @@ const ContactForm: React.FC = () => {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          textarea: formData.message, // Keep original field name for API compatibility
+          textarea: formData.message, 
         }),
       });
 
@@ -156,7 +156,7 @@ const ContactForm: React.FC = () => {
             <h2 className="font-heading mb-4 font-bold tracking-tight text-blue-900 text-3xl sm:text-6xl">
               Get in Touch
             </h2>
-            <p className="text-gray-700 md:text-lg">
+            <p className="text-black md:text-lg">
               We'd love to hear from you! Send us a message and we'll respond as
               soon as possible.
             </p>
@@ -197,8 +197,8 @@ const ContactForm: React.FC = () => {
                     <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900">
                       Our Address
                     </h3>
-                    <p className="text-gray-700">D10 Shivani, Near IIMA</p>
-                    <p className="text-gray-700">Ambavadi, Ahmedabad -15</p>
+                    <p className="text-black">D10 Shivani, Near IIMA</p>
+                    <p className="text-black">Ambavadi, Ahmedabad -15</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -221,10 +221,10 @@ const ContactForm: React.FC = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900">
+                    <h3 className="mb-2 text-lg font-medium leading-6 text-black">
                       Contact
                     </h3>
-                    <p className="text-gray-700">
+                    <p className="text-black">
                       Mobile:{" "}
                       <a
                         href="https://wa.me/919662512899"
@@ -236,7 +236,7 @@ const ContactForm: React.FC = () => {
                       </a>
                     </p>
 
-                    <p className="text-gray-700">
+                    <p className="text-black">
                       Mail:{" "}
                       <a
                         href="mailto:nitesh@xyz.com"

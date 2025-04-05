@@ -41,20 +41,11 @@ export async function POST(request: Request) {
       .filter((line) => line.trim().length > 0)
       .slice(0, 3); // Ensure we only get three use cases
 
-    // Format use cases with titles
+    // Format use cases with numbered titles
     const useCases = useCasesText.map((text, index) => {
-      // Extract first few words to create a meaningful title
-      const firstSentence = text.split(".")[0];
-      const words = firstSentence.split(" ");
-      const titleWords = words.slice(0, Math.min(5, words.length));
-      const title = titleWords.join(" ");
-      
-      // Capitalize first letter
-      const formattedTitle = title.charAt(0).toUpperCase() + title.slice(1);
-      
       return {
         id: index + 1,
-        title: formattedTitle,
+        title: `Use Case ${index + 1}`,
         description: text,
       };
     });
@@ -77,7 +68,7 @@ export async function POST(request: Request) {
         .map(
           (useCase) => `
           <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #e0e0e0; border-radius: 5px;">
-            <h3 style="margin-top: 0; color: #333;">${useCase.title}</h3>
+            <h3 style="margin-top: 0; color: #333;">Use Case ${useCase.id}</h3>
             <p style="color: #555;">${useCase.description}</p>
           </div>
         `
