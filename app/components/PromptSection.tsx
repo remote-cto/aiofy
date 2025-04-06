@@ -147,7 +147,7 @@ const PromptSection = () => {
         onMouseLeave={handleMouseLeave}
       >
         <span className="bg-blue-900 bg-clip-text font-bold text-transparent text-center">
-          HOW CAN AI HELP{" "}
+          AI CAN TRANSFORM{" "}
           <span className="relative text-blue-900">
             YOUR BUSINESS
             <span
@@ -156,7 +156,7 @@ const PromptSection = () => {
               }`}
             ></span>
           </span>
-          ? SEE RIGHT NOW
+          . SEE RIGHT NOW
         </span>
       </h1>
       <div className="p-5 bg-white rounded-lg shadow-sm mb-8">
@@ -176,7 +176,7 @@ const PromptSection = () => {
                 required
                 value={formData.website}
                 onChange={handleChange}
-                placeholder="https://yourwebsite.com"
+                placeholder="www.yourwebsite.com"
                 className={`w-full p-3 border ${
                   formErrors.website ? "border-red-500" : "border-gray-300"
                 } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFBF23]`}
