@@ -24,19 +24,19 @@ const Page = () => {
           </button>
         </div>
         {/* Header */}
-        <header className="pt-20 pb-16 px-4 md:px-8 max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center">
+        <header className="pt-20 pb-16 px-4 md:px-8 max-w-6xl mx-auto ">
+          <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center text-center">
             AI Model Training
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            At <span className="text-blue-900">Aiofy</span>, we don’t just train models — we craft high-performance
-            learners that understand patterns, predict outcomes, and evolve over
-            time. Whether you're building an intelligent chatbot, a smart
-            recommender system, or a powerful predictive engine, our AI model
-            training services are built to help your AI go from average to
-            extraordinary.
+          <p className="text-lg md:text-xl text-black w-full">
+            At <span className="text-blue-900">Aiofy</span>, we don’t just train
+            models — we craft high-performance learners that understand
+            patterns, predict outcomes, and evolve over time. Whether you're
+            building an intelligent chatbot, a smart recommender system, or a
+            powerful predictive engine, our AI model training services are built
+            to help your AI go from average to extraordinary.
           </p>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-black w-full mt-3">
             From foundational models to custom fine-tuned architectures, we
             handle every step — data prep, model selection, training, tuning,
             and deployment — so your AI delivers real business value, not just

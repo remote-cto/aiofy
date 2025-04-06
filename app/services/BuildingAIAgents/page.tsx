@@ -24,11 +24,11 @@ const Page = () => {
           </button>
         </div>
         {/* Header */}
-        <header className="pt-20 pb-16 px-4 md:px-8 max-w-6xl mx-auto text-center">
+        <header className="pt-20 pb-16 px-4 md:px-8 max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center">
-            AI Model Training
+            Building AI Agents
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-black w-full text-left">
             At <span className="text-blue-900">Aiofy</span>, we design AI agents
             that go beyond simple automation. These are intelligent digital
             workers that can think, decide, and act — all in real time. From

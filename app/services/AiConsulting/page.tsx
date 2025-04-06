@@ -28,11 +28,12 @@ const Page = () => {
           <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center text-center">
             AI Consulting and Product Engineering
           </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            At <span className="text-blue-900">Aiofy</span>, we help businesses unlock the full potential of AI with
-            sharp strategy and cutting-edge engineering. Whether you're
-            exploring possibilities or building the next big thing, we’re here
-            to make sure your AI journey is fast, focused, and full of wins.
+          <p className="text-lg md:text-xl text-black w-full">
+            At <span className="text-blue-900">Aiofy</span>, we help businesses
+            unlock the full potential of AI with sharp strategy and cutting-edge
+            engineering. Whether you're exploring possibilities or building the
+            next big thing, we're here to make sure your AI journey is fast,
+            focused, and full of wins.
           </p>
         </header>
 
