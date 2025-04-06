@@ -62,7 +62,6 @@ const Navbar: React.FC = () => {
             />
           </div>
 
-          {/* Slogan Image*/}
           <div className="">
             <Image
               src="/images/slogan.jpg"
