@@ -29,7 +29,7 @@ const PromptSection = () => {
       setIsAnimating(true);
       setTimeout(() => setIsAnimating(false), 2000);
     }, 4000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
@@ -47,7 +47,8 @@ const PromptSection = () => {
   };
 
   const validateWebsite = (website: string): boolean => {
-    const urlRegex = /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(\/[a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]*)?$/;
+    const urlRegex =
+      /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(\/[a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]*)?$/;
     return urlRegex.test(website);
   };
 
@@ -74,33 +75,32 @@ const PromptSection = () => {
       setLoading(true);
       setError(null);
       setEmailSent(false);
-      
+
       // API call to ChatGPT
-      const response = await fetch('/api/generateUsecase', {
-        method: 'POST',
+      const response = await fetch("/api/generateUsecase", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           prompt: `Analyse the website ${website} in real time and list three innovative, practical, and relevant AI use cases for this company that can drive significant growth to the business. Only list the three AI use cases without any additional explanation.`,
           website: website,
-          email: email
+          email: email,
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to fetch AI use cases');
+        throw new Error("Failed to fetch AI use cases");
       }
 
       const data = await response.json();
-      
+
       // Set the use cases from the response
       setUseCases(data.useCases);
       setEmailSent(true);
-      
     } catch (error) {
-      console.error('Error fetching AI use cases:', error);
-      setError('Unable to generate AI use cases. Please try again later.');
+      console.error("Error fetching AI use cases:", error);
+      setError("Unable to generate AI use cases. Please try again later.");
       setUseCases([]);
     } finally {
       setLoading(false);
@@ -127,13 +127,13 @@ const PromptSection = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
-    
+
     console.log("Form data submitted:", formData);
-    
+
     // Get AI-generated use cases
     await fetchAIUseCases(formData.website, formData.email);
     setSubmitted(true);
@@ -141,20 +141,25 @@ const PromptSection = () => {
 
   return (
     <div className="lg:max-w-screen-xl mx-auto">
-      <h1 
+      <h1
         className="text-xl lg:text-3xl mt-10 transition-all duration-300 cursor-pointer text-center"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <span className="bg-blue-900 bg-clip-text font-bold text-transparent text-center">
-          HOW CAN AI HELP <span className="relative text-blue-900">YOUR BUSINESS
-            <span className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 w-full transform transition-all duration-500 ${isAnimating ? 'scale-x-100' : 'scale-x-0'}`}></span>
-          </span>? SEE RIGHT NOW 
-         
+          HOW CAN AI HELP{" "}
+          <span className="relative text-blue-900">
+            YOUR BUSINESS
+            <span
+              className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 w-full transform transition-all duration-500 ${
+                isAnimating ? "scale-x-100" : "scale-x-0"
+              }`}
+            ></span>
+          </span>
+          ? SEE RIGHT NOW
         </span>
       </h1>
       <div className="p-5 bg-white rounded-lg shadow-sm mb-8">
-        
         <form onSubmit={handleSubmit} className="mb-6">
           <div className="flex flex-col md:flex-row gap-4 md:items-start">
             <div className="flex-grow">
@@ -162,7 +167,7 @@ const PromptSection = () => {
                 htmlFor="website"
                 className="block text-sm font-medium text-black mb-1"
               >
-                Website URL
+                Your Business Website
               </label>
               <input
                 id="website"
@@ -224,9 +229,7 @@ const PromptSection = () => {
                 {error}
               </div>
             ) : (
-              <div>
-
-              </div>
+              <div></div>
             )}
 
             {loading ? (
@@ -242,17 +245,21 @@ const PromptSection = () => {
                         key={useCase.id}
                         className="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                       >
-                        <h3 className="font-bold text-lg mb-2 text-blue-900">Use Case {useCase.id}</h3>
+                        <h3 className="font-bold text-lg mb-2 text-blue-900">
+                          Use Case {useCase.id}
+                        </h3>
                         <p className="text-gray-700">{useCase.description}</p>
                       </div>
                     ))}
                   </div>
-                  
+
                   {/* Contact CTA section */}
                   <div className="mt-8 p-5 bg-yellow-50 rounded-lg  border-yellow-300 text-center">
-                    <h3 className="text-[35px] font-bold text-blue-900 mb-2">We can get this done for you. FAST!</h3>
-                    <a 
-                      href="/contact" 
+                    <h3 className="text-[35px] font-bold text-blue-900 mb-2">
+                      We can get this done for you. FAST!
+                    </h3>
+                    <a
+                      href="/contact"
                       className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-medium py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
                     >
                       Contact NOW

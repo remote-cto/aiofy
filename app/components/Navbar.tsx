@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
               width={150}
               height={1}
               alt="aiofy logo"
-              className="object-contain max-w-[100px] lg:max-w-[150px]"
+              className="object-contain max-w-[80px] lg:max-w-[150px]"
             />
           </div>
 
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
               width={400}
               height={80}
               alt="Making Your Business AI-Enabled"
-              className="object-contain"
+              className="object-contain max-w-[170px] lg:max-w-[400px]"
             />
           </div>
         </div>

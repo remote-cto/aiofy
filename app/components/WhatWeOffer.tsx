@@ -56,26 +56,35 @@ const ServicesPage = () => {
     {
       image: "/images/AIConsulting.jpg",
       title: "AI Consulting and Product Engineering",
-      description:"From spotting where AI fits best in your business to building clever solutions that actually work — we help you plug AI into your business like magic. Got an idea? We’ll turn it into a smart, sleek AI product that’s ready to roll. So whether you’re dreaming big or scaling fast, we’ve got the brains (and the code) to make it happen!",
+      description1:
+        "From spotting where AI fits best in your business to building clever solutions that actually work — we help you plug AI into your business like magic. Got an idea? We’ll turn it into a smart, sleek AI product that’s ready to roll.",
+      description2:
+        "So whether you’re dreaming big or scaling fast, we’ve got the brains (and the code) to make it happen!",
       link: "/services/AiConsulting",
     },
     {
       image: "/images/ModelTraining.jpg",
       title: "AI Model Training",
-      description:"Whether you're teaching a model to chat, predict, or make smart decisions — we train AI like total pros. From wrangling messy data to fine-tuning every layer, we handle the nerdy stuff so your AI just wows. Need a model that actually gets the job done? We’ll build it, train it, and set it loose!",
+      description1:
+        "Whether you're teaching a model to chat, predict, or make smart decisions — we train AI like total pros. From wrangling messy data to fine-tuning every layer, we handle the nerdy stuff so your AI just wows.",
+      description2:
+        "Need a model that actually gets the job done? We’ll build it, train it, and set it loose!",
       link: "/services/AiModelTraining",
     },
     {
       image: "/images/genAI.jpg",
-      title: "Generative AI Solutions",
-      description:"From smart sidekicks to tireless digital doers — we build AI agents that think, act, and get things DONE. Whether it's automating tasks, chatting like a human, or mastering complex workflows, our agents don't just assist — they ace it. We craft AI agents that operate like seasoned pros, so you can focus on the big moves , while they handle the heavy lifting behind the scenes.",
-      link: "/services/GenerativeAiSolutions",
+      title: "Building AI Agents",
+      description1:
+        "From smart sidekicks to tireless digital doers — we build AI agents that think, act, and get things DONE. Whether it's automating tasks, chatting like a human, or mastering complex workflows, our agents don't just assist — they ace it.",
+      description2:
+        "We craft AI agents that operate like seasoned pros, so you can focus on the big moves , while they handle the heavy lifting behind the scenes.",
+      link: "/services/BuildingAIAgents",
     },
   ];
 
   return (
     <motion.div
-     id="services-section"
+      id="services-section"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -120,8 +129,11 @@ const ServicesPage = () => {
                 <h2 className="text-xl font-bold text-blue-900 mb-3">
                   {service.title}
                 </h2>
+                <p className="text-black leading-relaxed mb-1 flex-grow">
+                  {service.description1}
+                </p>
                 <p className="text-black leading-relaxed mb-4 flex-grow">
-                  {service.description}
+                  {service.description2}
                 </p>
                 <div className="mt-auto">
                   {/* <CoolMode> */}
