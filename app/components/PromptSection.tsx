@@ -142,15 +142,15 @@ const PromptSection = () => {
   return (
     <div className="lg:max-w-screen-xl mx-auto">
       <h1 
-        className="text-xl lg:text-3xl mt-10 transition-all duration-300 cursor-pointer"
+        className="text-xl lg:text-3xl mt-10 transition-all duration-300 cursor-pointer text-center"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <span className="bg-blue-900 bg-clip-text font-bold text-transparent inline-block">
+        <span className="bg-blue-900 bg-clip-text font-bold text-transparent text-center">
           HOW CAN AI HELP <span className="relative text-blue-900">YOUR BUSINESS
             <span className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 w-full transform transition-all duration-500 ${isAnimating ? 'scale-x-100' : 'scale-x-0'}`}></span>
           </span>? SEE RIGHT NOW 
-          <span className="text-yellow-500 h-[45px]">⬇️</span>
+         
         </span>
       </h1>
       <div className="p-5 bg-white rounded-lg shadow-sm mb-8">
