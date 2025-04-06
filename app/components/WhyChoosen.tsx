@@ -157,6 +157,91 @@ const WhyChoosen: React.FC = () => {
         </div>
       ),
     },
+    {
+      title: "Human-Centric Approach",
+      description: "We blend smart tech with real-world usability",
+      icon: (
+        <svg
+          className="w-12 h-12"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Brain */}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 4.5c2.7 0 5.8 2 5.8 5.5 0 2.5-1.6 4-3.8 4"
+            className="animate-pulse"
+            style={{ animationDuration: "3s" }}
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 4.5c-2.7 0-5.8 2-5.8 5.5 0 2.5 1.6 4 3.8 4"
+            className="animate-pulse"
+            style={{ animationDuration: "3s", animationDelay: "0.5s" }}
+          />
+          
+          {/* Head outline */}
+          <circle
+            cx="12"
+            cy="9"
+            r="7"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            className="animate-pulse"
+            style={{ animationDuration: "4s" }}
+          />
+          
+          {/* Face */}
+          <circle cx="9" cy="8" r="0.5" fill="currentColor" />
+          <circle cx="15" cy="8" r="0.5" fill="currentColor" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M9 11c.85 1.5 5.15 1.5 6 0"
+          />
+          
+          {/* Person */}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 16v3"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 20l3-1 3 1"
+          />
+          
+          {/* Technology connection */}
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M5 9h1"
+            className="animate-pulse"
+            style={{ animationDuration: "2s" }}
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M18 9h1"
+            className="animate-pulse"
+            style={{ animationDuration: "2s", animationDelay: "0.3s" }}
+          />
+        </svg>
+      ),
+    },
   ];
 
   return (
