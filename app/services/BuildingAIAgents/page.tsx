@@ -41,7 +41,7 @@ const Page = () => {
         </header>
 
         {/* Main Content */}
-        <main className="px-4 md:px-8 max-w-6xl mx-auto pb-20">
+        <main className="px-4 md:px-8 max-w-6xl mx-auto pb-2">
           <section className="bg-white rounded-2xl shadow-xl p-8 mb-10">
             <div className="flex items-center mb-8">
               <div className="w-12 h-12 bg-[#FFBF23] rounded-lg flex items-center justify-center mr-4">
@@ -120,6 +120,14 @@ const Page = () => {
             </div>
           </section>
         </main>
+        <div className="p-5 rounded-lg text-center">
+          <a
+            href="/contact"
+            className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-medium py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
+          >
+            Contact Us
+          </a>
+        </div>
 
         {/* Footer */}
         <footer className="bg-[#FFBF23] text-black py-8 px-4">
