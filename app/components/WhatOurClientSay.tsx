@@ -16,36 +16,44 @@ const WhatOurClientsSay: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      content: "Nirvana.AI transformed our data strategy with actionable AI insights. Their expertise is unparalleled!",
+      content: "AIofy transformed our data strategy with actionable AI insights. Their expertise is unparalleled!",
       author: "Mark D.",
       position: "CTO",
-      company: "FinTech Solutions",
+      company: "AdC Networks",
       rating: 5
     },
     {
       id: 2,
       content: "Their AI model training elevated our automation capabilities significantly. Truly a game-changer!",
-      author: "Sophia L.",
-      position: "CEO",
-      company: "HealthTech Innovators",
+      author: "Disha",
+      position: "Chief Data Officer",
+      company: "SDS Insights",
       rating: 5
     },
-    // {
-    //   id: 3,
-    //   content: "We've seen a 43% increase in customer engagement since implementing Nirvana's AI recommendation engine.",
-    //   author: "James W.",
-    //   position: "Head of Digital",
-    //   company: "Retail Nexus",
-    //   rating: 5
-    // },
-    // {
-    //   id: 4,
-    //   content: "The ROI we've achieved with Nirvana's predictive analytics has exceeded our expectations by 200%.",
-    //   author: "Elena R.",
-    //   position: "Director of Operations",
-    //   company: "Manufacturing Excellence",
-    //   rating: 5
-    // }
+    {
+      id: 3,
+      content: "Aiofy didn’t just consult — they co-piloted our entire AI journey. From idea to execution, their team made complex tech feel surprisingly human. Game-changer!",
+      author: "Jignesh Patel",
+      position: "Founder",
+      company: "ElloraVision",
+      rating: 5
+    },
+    {
+      id: 4,
+      content: "The AI agents they built for us now handle tasks we used to spend hours on. It’s like hiring a digital team that never sleeps!",
+      author: "Harish",
+      position: "Co-Founder",
+      company: "CocoPalm",
+      rating: 5
+    },
+    {
+      id: 5,
+      content: "Training AI always felt like rocket science. Aiofy turned it into a breeze. Our models perform better than ever — and we actually understand them now.",
+      author: "Mak",
+      position: "Founder",
+      company: "EmporiaMax",
+      rating: 5
+    }
   ];
 
   useEffect(() => {

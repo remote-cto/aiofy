@@ -17,14 +17,10 @@ const About = () => {
             About <span className="text-[#FFBF23]">Our Company</span>
           </h2>
           <p className="text-black">
-            At <span className="text-blue-900">AIofy</span>, we are your partners in navigating the AI revolution.
-            As a leading AI consulting company, we specialize in transforming
-            businesses through Advanced AI consulting, Custom AI model training,
-            and Building cutting-edge Generative AI solutions. Our mission is
-            simple: to help you harness the power of artificial intelligence to
-            innovate, optimize, and thrive in a rapidly evolving digital
-            landscape.
+          Welcome to <span className="text-blue-900">AIofy</span> -- where smart meets cool in the world of AI. We team up with you to bring bold ideas to life by using genius AI strategies, training smart models, or building agents that work like magic.
+
           </p>
+          <p>No jargon, just real solutions that make your business faster, smarter, and future-proof.</p>
         </div>
       </div>
     </div>
