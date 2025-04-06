@@ -25,18 +25,18 @@ const Page = () => {
         </div>
         {/* Header */}
         <header className="pt-20 pb-16 px-4 md:px-8 max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl  sm:text-5xl text-[#] mb-4 flex items-center justify-center">
-            Generative AI Solutions – Redefining Innovation and Automation
+          <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center">
+            AI Model Training
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            Go beyond traditional AI capabilities with our{" "}
-            <span className="font-bold">Generative AI Solutions</span>—designed
-            to{" "}
-            <span className="font-bold">create, optimize, and transform</span>.
-            From <span className="font-bold">content generation</span> to{" "}
-            <span className="font-bold">complex simulations</span>, our
-            solutions unlock the full potential of AI to fuel innovation at
-            every level.
+            At <span className="text-blue-900">Aiofy</span>, we design AI agents
+            that go beyond simple automation. These are intelligent digital
+            workers that can think, decide, and act — all in real time. From
+            handling repetitive tasks to managing complex workflows, we create
+            agents that truly understand the context, adapt to changes, and
+            deliver results like seasoned pros. Whether it’s a chatbot with
+            personality or an autonomous system running behind the scenes — our
+            AI agents get the job done, 24/7.
           </p>
         </header>
 
@@ -53,79 +53,68 @@ const Page = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* AI-Powered Content Creation */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  AI-Powered Content Creation:
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex">
-                    <span className="font-bold text-gray-700 mr-2">Text:</span>
-                    <span className="text-gray-600">
-                      Generate high-converting marketing copy, reports, and
-                      technical documentation.
-                    </span>
-                  </li>
-                  <li className="flex">
-                    <span className="font-bold text-gray-700 mr-2">
-                      Visuals:
-                    </span>
-                    <span className="text-gray-600">
-                      AI-generated images and videos for advertising and social
-                      media, tailored to your brand voice.
-                    </span>
-                  </li>
-                  <li className="flex">
-                    <span className="font-bold text-gray-700 mr-2">Code:</span>
-                    <span className="text-gray-600">
-                      Automate coding tasks with AI-based code generators and
-                      error detection for faster development cycles.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Synthetic Data Generation */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
-                <h3 className="text-xl font-bold text-black mb-4">
-                  Synthetic Data Generation:
+                  Task-Specific Autonomous Agents
                 </h3>
                 <p className="text-gray-600">
-                  Create high-quality synthetic data to train models where real
-                  data is scarce or sensitive, ensuring privacy compliance.
+                  We build agents with sharp focus — whether it’s customer
+                  support, lead generation, or knowledge management — they own
+                  their task and deliver, every time.
                 </p>
               </div>
 
-              {/* Conversational AI */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Conversational AI:
+                  Multi-Agent Collaboration Systems
                 </h3>
                 <p className="text-gray-600">
-                  Develop lifelike chatbots and virtual assistants with advanced
-                  natural language understanding and contextual learning.
+                  Need agents that work as a team? We engineer agent ecosystems
+                  that collaborate, communicate, and coordinate to achieve
+                  complex goals seamlessly.
                 </p>
               </div>
 
-              {/* Design and Creativity Automation */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Design and Creativity Automation:
+                  Conversational Agents with Memory
                 </h3>
                 <p className="text-gray-600">
-                  Use AI to automate graphic design, video editing, and UX/UI
-                  enhancements, reducing time-to-market.
+                  Beyond chatbots — we design AI agents that remember, learn
+                  from users, and get smarter with every conversation.
                 </p>
               </div>
 
-              {/* AI-Driven Simulations */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Agent + Tool Integration
+                </h3>
+                <p className="text-gray-600">
+                  We equip agents to use external tools, APIs, and plugins —
+                  from web browsing to sending emails — giving them real-world
+                  utility, not just intelligence.
+                </p>
+              </div>
+
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  AI-Driven Simulations:
+                  Secure & Ethical AI Behavior
                 </h3>
                 <p className="text-gray-600">
-                  Build predictive simulations for financial forecasting, risk
-                  analysis, and supply chain optimization.
+                  We bake in safety, compliance, and responsible behavior —
+                  ensuring agents stay aligned with human intent and company
+                  policies.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Deployment-Ready Architectures
+                </h3>
+                <p className="text-gray-600">
+                  From design to real-world deployment, we ensure your agents
+                  are scalable, low-latency, and production-grade — ready to run
+                  anywhere: cloud, edge, or hybrid.
                 </p>
               </div>
             </div>
@@ -136,8 +125,7 @@ const Page = () => {
         <footer className="bg-[#FFBF23] text-black py-8 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-lg">
-              Transform your business with next-generation Generative AI
-              Solutions
+              Transform your business with next-generation AI Model Training
             </p>
           </div>
         </footer>

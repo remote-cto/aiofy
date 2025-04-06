@@ -26,10 +26,21 @@ const Page = () => {
         {/* Header */}
         <header className="pt-20 pb-16 px-4 md:px-8 max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center">
-            AI Model Training – Precision Engineering for Intelligent Systems
+            AI Model Training
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            The heart of every AI solution is a well-trained model. Our AI Model Training services focus on <span className="font-bold">accuracy, speed,</span> and <span className="font-bold">scalability</span> to build models that not only understand data but also <span className="font-bold">anticipate trends</span> and make actionable predictions.
+            At <span className="text-blue-900">Aiofy</span>, we don’t just train models — we craft high-performance
+            learners that understand patterns, predict outcomes, and evolve over
+            time. Whether you're building an intelligent chatbot, a smart
+            recommender system, or a powerful predictive engine, our AI model
+            training services are built to help your AI go from average to
+            extraordinary.
+          </p>
+          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+            From foundational models to custom fine-tuned architectures, we
+            handle every step — data prep, model selection, training, tuning,
+            and deployment — so your AI delivers real business value, not just
+            theoretical promise.
           </p>
         </header>
 
@@ -46,53 +57,69 @@ const Page = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Data Strategy & Curation */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Data Strategy & Curation:
+                  End-to-End Model Development
                 </h3>
                 <p className="text-gray-600">
-                  Sourcing, cleaning, and enriching data to build high-quality datasets that enhance model accuracy.
+                  From data prep to deployment, we train AI models tailored to
+                  your unique use case — whether it's NLP, vision, prediction,
+                  or recommendation engines.
                 </p>
               </div>
 
-              {/* Advanced Training Techniques */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Advanced Training Techniques:
+                  ine-Tuning Pretrained Models
                 </h3>
                 <p className="text-gray-600">
-                  Implementing deep learning, reinforcement learning, and transfer learning for specialized applications—whether it's natural language processing or computer vision.
+                  Leverage the power of state-of-the-art models like GPT, BERT,
+                  or Stable Diffusion — fine-tuned specifically to your domain
+                  for laser-sharp accuracy and performance.
                 </p>
               </div>
 
-              {/* Model Explainability & Interpretability */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Model Explainability & Interpretability:
+                  Custom Dataset Engineering
                 </h3>
                 <p className="text-gray-600">
-                  Building transparent models that provide clear rationales for their predictions, fostering trust and compliance.
+                  We design, clean, and optimize high-quality datasets that make
+                  your model smarter, faster, and more reliable — because great
+                  AI starts with great data.
                 </p>
               </div>
 
-              {/* Cross-Industry Expertise */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Cross-Industry Expertise:
+                  Performance Optimization & Scaling
                 </h3>
                 <p className="text-gray-600">
-                  Training models for diverse domains—Healthcare, Finance, E-commerce, Cybersecurity, and more.
+                  We don’t just train models — we squeeze every ounce of
+                  performance out of them using quantization, pruning, and model
+                  distillation, ready to scale in real-world environments.
                 </p>
               </div>
 
-              {/* Performance Monitoring */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Performance Monitoring:
+                  Evaluation & Bias Reduction
                 </h3>
                 <p className="text-gray-600">
-                  Continuous model evaluation and fine-tuning to adapt to evolving data patterns and maintain peak performance.
+                  Our training pipeline includes rigorous testing for fairness,
+                  bias, and robustness — ensuring your AI is ethical, compliant,
+                  and trustworthy.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
+                <h3 className="text-xl font-bold text-black mb-4">
+                  Continual Learning Pipelines
+                </h3>
+                <p className="text-gray-600">
+                  Stay ahead of the curve with AI that learns over time. We
+                  build pipelines that retrain your models with new data,
+                  keeping them sharp, relevant, and future-proof.
                 </p>
               </div>
             </div>
@@ -101,7 +128,7 @@ const Page = () => {
 
         {/* Footer */}
         <footer className="bg-[#FFBF23] text-black py-8 px-4">
-          <div className="max-w-6xl mx-auto text-center" >
+          <div className="max-w-6xl mx-auto text-center">
             <p className="text-lg">
               Transform your business with next-generation AI Model Training
             </p>

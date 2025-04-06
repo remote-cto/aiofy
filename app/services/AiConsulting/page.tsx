@@ -24,12 +24,15 @@ const Page = () => {
           </button>
         </div>
         {/* Header */}
-        <header className="pt-20 pb-16 px-4 md:px-8 max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center">
-            AI Consulting – Strategic Intelligence That Transforms
+        <header className="pt-20 pb-16 px-4 md:px-8 max-w-6xl mx-auto ">
+          <h2 className="text-3xl sm:text-5xl text-[#] mb-4 flex items-center justify-center text-center">
+            AI Consulting and Product Engineering
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            AI is not just about technology; it's about strategy. At Nirvana.AI, we integrate AI into your business model to drive <span className="font-bold">intelligent automation, predictive analytics,</span> and <span className="font-bold">enhanced decision-making</span>. Our approach is not just consultative—it's transformative.
+            At <span className="text-blue-900">Aiofy</span>, we help businesses unlock the full potential of AI with
+            sharp strategy and cutting-edge engineering. Whether you're
+            exploring possibilities or building the next big thing, we’re here
+            to make sure your AI journey is fast, focused, and full of wins.
           </p>
         </header>
 
@@ -49,50 +52,57 @@ const Page = () => {
               {/* AI Maturity Assessment */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  AI Maturity Assessment:
+                  AI Maturity Assessment
                 </h3>
                 <p className="text-gray-600">
-                  A comprehensive audit of your existing infrastructure, data maturity, and AI capabilities to identify gaps and opportunities.
+                  A comprehensive audit of your existing infrastructure, data
+                  maturity, and AI capabilities to identify gaps and
+                  opportunities.
                 </p>
               </div>
 
               {/* Business Impact Analysis */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Business Impact Analysis:
+                  Business Impact Analysis
                 </h3>
                 <p className="text-gray-600">
-                  In-depth analysis to pinpoint areas where AI can deliver the highest ROI—from cost reduction to revenue growth.
+                  In-depth analysis to pinpoint areas where AI can deliver the
+                  highest ROI—from cost reduction to revenue growth.
                 </p>
               </div>
 
               {/* Custom AI Strategy Development */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Custom AI Strategy Development:
+                  Custom AI Strategy Development
                 </h3>
                 <p className="text-gray-600">
-                  Personalized roadmaps with clear milestones, financial projections, and risk assessments to ensure seamless AI adoption.
+                  Personalized roadmaps with clear milestones, financial
+                  projections, and risk assessments to ensure seamless AI
+                  adoption.
                 </p>
               </div>
 
               {/* AI Governance Frameworks */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  AI Governance Frameworks:
+                  AI Governance Frameworks
                 </h3>
                 <p className="text-gray-600">
-                  Best-in-class governance protocols to manage risks, compliance, and ethical considerations with precision.
+                  Best-in-class governance protocols to manage risks,
+                  compliance, and ethical considerations with precision.
                 </p>
               </div>
 
               {/* Change Management Support */}
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  Change Management Support:
+                  Change Management Support
                 </h3>
                 <p className="text-gray-600">
-                  Dedicated support for workforce upskilling and process transformation to maximize AI adoption.
+                  Dedicated support for workforce upskilling and process
+                  transformation to maximize AI adoption.
                 </p>
               </div>
             </div>
