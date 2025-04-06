@@ -239,10 +239,10 @@ const ContactForm: React.FC = () => {
                     <p className="text-black">
                       Mail:{" "}
                       <a
-                        href="mailto:nitesh@xyz.com"
+                        href="mailto:real.human@aiofy.co"
                         className="text-blue-700 hover:underline"
                       >
-                        nitesh@xyz.com
+                        real.human@aiofy.co
                       </a>
                     </p>
                   </div>
