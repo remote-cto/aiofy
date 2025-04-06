@@ -250,7 +250,7 @@ const PromptSection = () => {
                   
                   {/* Contact CTA section */}
                   <div className="mt-8 p-5 bg-yellow-50 rounded-lg  border-yellow-300 text-center">
-                    <h3 className="text-3xl font-bold text-blue-900 mb-2">We can get this done for you. FAST!</h3>
+                    <h3 className="text-[35px] font-bold text-blue-900 mb-2">We can get this done for you. FAST!</h3>
                     <a 
                       href="/contact" 
                       className="inline-block bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-medium py-3 px-6 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-md"
