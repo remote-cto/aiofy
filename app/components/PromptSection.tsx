@@ -224,9 +224,8 @@ const PromptSection = () => {
                 {error}
               </div>
             ) : (
-              <div className="p-4 bg-yellow-50 rounded-lg  border-yellow-300 mb-6">
-                <p>AI Use Case Analysis complete for {formData.website}</p>
-                {/* {emailSent && <p className="mt-2">Results have been emailed to our team.</p>} */}
+              <div>
+                
               </div>
             )}
 
