@@ -34,7 +34,7 @@ const Page = () => {
             workers that can think, decide, and act — all in real time. From
             handling repetitive tasks to managing complex workflows, we create
             agents that truly understand the context, adapt to changes, and
-            deliver results like seasoned pros. Whether it’s a chatbot with
+            deliver results like seasoned pros. Whether it's a chatbot with
             personality or an autonomous system running behind the scenes — our
             AI agents get the job done, 24/7.
           </p>
@@ -58,7 +58,7 @@ const Page = () => {
                   Task-Specific Autonomous Agents
                 </h3>
                 <p className="text-gray-600">
-                  We build agents with sharp focus — whether it’s customer
+                  We build agents with sharp focus — whether it's customer
                   support, lead generation, or knowledge management — they own
                   their task and deliver, every time.
                 </p>
@@ -96,7 +96,7 @@ const Page = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
                   Secure & Ethical AI Behavior
                 </h3>
@@ -107,7 +107,7 @@ const Page = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
                   Deployment-Ready Architectures
                 </h3>

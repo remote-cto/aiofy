@@ -29,7 +29,7 @@ const Page = () => {
             AI Model Training
           </h2>
           <p className="text-lg md:text-xl text-black w-full">
-            At <span className="text-blue-900">Aiofy</span>, we don’t just train
+            At <span className="text-blue-900">Aiofy</span>, we don't just train
             models — we craft high-performance learners that understand
             patterns, predict outcomes, and evolve over time. Whether you're
             building an intelligent chatbot, a smart recommender system, or a
@@ -70,7 +70,7 @@ const Page = () => {
 
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
-                  ine-Tuning Pretrained Models
+                  Fine-Tuning Pretrained Models
                 </h3>
                 <p className="text-gray-600">
                   Leverage the power of state-of-the-art models like GPT, BERT,
@@ -95,13 +95,13 @@ const Page = () => {
                   Performance Optimization & Scaling
                 </h3>
                 <p className="text-gray-600">
-                  We don’t just train models — we squeeze every ounce of
+                  We don't just train models — we squeeze every ounce of
                   performance out of them using quantization, pruning, and model
                   distillation, ready to scale in real-world environments.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
                   Evaluation & Bias Reduction
                 </h3>
@@ -112,7 +112,7 @@ const Page = () => {
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 md:col-span-2">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
                 <h3 className="text-xl font-bold text-black mb-4">
                   Continual Learning Pipelines
                 </h3>
