@@ -3,6 +3,7 @@ import React from "react";
 
 import { useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import Image from "next/image";
 
 const Page = () => {
   const router = useRouter();
@@ -48,8 +49,14 @@ const Page = () => {
         <main className="px-4 md:px-8 max-w-6xl mx-auto pb-2">
           <section className="bg-white rounded-2xl shadow-xl p-8 mb-10">
             <div className="flex items-center mb-8">
-              <div className="w-12 h-12 bg-[#FFBF23] rounded-lg flex items-center justify-center mr-4">
-                <span className="text-white text-2xl">🔹</span>
+              <div className="w-14 h-11 mr-4">
+                <Image
+                  src="/images/aiofyicon.jpg"
+                  alt="Services icon"
+                  width={108}
+                  height={68}
+                  className="rounded-lg"
+                />
               </div>
               <h2 className="text-2xl md:text-3xl font-bold text-black">
                 What We Offer:
