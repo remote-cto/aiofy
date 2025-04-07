@@ -76,14 +76,14 @@ const PromptSection = () => {
       setError(null);
       setEmailSent(false);
 
-      // API call to ChatGPT
+      // API call to ChatGPT with updated prompt that includes "AI Can" headings
       const response = await fetch("/api/generateUsecase", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          prompt: `Analyse the website ${website} in real time and list three innovative, practical, and relevant AI use cases for this company that can drive significant growth to the business. Only list the three AI use cases without any additional explanation.`,
+          prompt: `Analyse the website ${website} in real time and create three innovative, practical, and relevant AI use cases with custom "AI Can" headings.`,
           website: website,
           email: email,
         }),
@@ -246,7 +246,7 @@ const PromptSection = () => {
                         className="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow"
                       >
                         <h3 className="font-bold text-lg mb-2 text-blue-900">
-                          Use Case {useCase.id}
+                          {useCase.title}
                         </h3>
                         <p className="text-gray-700">{useCase.description}</p>
                       </div>
@@ -254,7 +254,7 @@ const PromptSection = () => {
                   </div>
 
                   {/* Contact CTA section */}
-                  <div className="mt-8 p-5 bg-yellow-50 rounded-lg  border-yellow-300 text-center">
+                  <div className="mt-8 p-5 bg-yellow-50 rounded-lg border-yellow-300 text-center">
                     <h3 className="text-[35px] font-bold text-blue-900 mb-2">
                       We can get this done for you. FAST!
                     </h3>
