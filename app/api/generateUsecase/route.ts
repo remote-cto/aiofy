@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
     // Modified prompt to request specific "AI Can" style headings
     const enhancedPrompt = `
-    Analyze the website ${website} in real time and identify three innovative, practical, and relevant AI use cases for this company that can drive significant business growth.
+    Analyze the website ${website} in real time and identify three innovative, practical, and relevant AI use cases for this company that can drive significant business growth. Dont go by the name of the website. Analyze the site in real.
     
     For each use case:
     1. Create a concise headline starting with "AI Can" that captures the essence of the use case (e.g., "AI Can Personalize Customer Journeys")
