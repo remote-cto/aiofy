@@ -88,8 +88,8 @@ const GetInTouch: React.FC = () => {
 
   return (
     <div className="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden mt-2 mb-2">
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 py-4">
-        <h2 className="text-center text-white text-2xl font-bold tracking-wide">
+      <div className="bg-[#FDC700] py-4">
+        <h2 className="text-center text-blue-900 text-2xl font-bold tracking-wide">
           GET IN TOUCH
         </h2>
       </div>
