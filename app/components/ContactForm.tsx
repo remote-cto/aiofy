@@ -6,7 +6,7 @@ const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "", // renamed from textarea for clarity
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
@@ -19,7 +19,6 @@ const ContactForm: React.FC = () => {
     message: "",
   });
 
-  // Clear success message after 5 seconds
   useEffect(() => {
     if (submitStatus.type === "success") {
       const timer = setTimeout(() => {
@@ -75,10 +74,8 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Reset status
     setSubmitStatus({ type: null, message: "" });
 
-    // Validate all fields
     const errors = {
       name: validateField("name", formData.name),
       email: validateField("email", formData.email),
@@ -87,7 +84,6 @@ const ContactForm: React.FC = () => {
 
     setFieldErrors(errors);
 
-    // Check if there are any errors
     if (Object.values(errors).some((error) => error !== "")) {
       setSubmitStatus({
         type: "error",
@@ -107,7 +103,7 @@ const ContactForm: React.FC = () => {
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
-          textarea: formData.message, 
+          textarea: formData.message,
         }),
       });
 
@@ -117,13 +113,11 @@ const ContactForm: React.FC = () => {
         throw new Error(data.error || "Failed to send message");
       }
 
-      // Success
       setSubmitStatus({
         type: "success",
         message: "Your message has been sent successfully!",
       });
 
-      // Reset form
       setFormData({
         name: "",
         email: "",

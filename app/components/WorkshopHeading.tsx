@@ -3,9 +3,12 @@ import React from "react";
 const WorkshopHeading = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12 font-sans">
-      <h1 className="text-2xl lg:text-4xl font-bold text-center text-blue-900 mb-12">
-        AI FOR BUSINESS LEADERS
-      </h1>
+      <div className="text-center mb-2">
+        <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-900 mb-4">
+          AI FOR BUSINESS LEADERS
+        </h2>
+        <div className="w-24 h-1 bg-[#FDC700] mx-auto mb-12"></div>
+      </div>
 
       <div className="mb-10">
         <p className="text-lg text-gray-600 mb-6 leading-relaxed max-w-4xl mx-auto text-center">

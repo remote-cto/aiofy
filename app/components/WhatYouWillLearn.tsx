@@ -42,9 +42,12 @@ const WhatYouWillLearn = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-16 font-sans">
-      <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-900 mb-12">
-        WHAT YOU WILL LEARN?
-      </h2>
+      <div className="text-center mb-2">
+        <h2 className="text-2xl lg:text-4xl font-bold text-center text-blue-900 mb-4">
+          WHAT YOU WILL LEARN?
+        </h2>
+        <div className="w-24 h-1 bg-[#FDC700] mx-auto mb-12"></div>
+      </div>
 
       <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-md p-8 max-w-4xl mx-auto">
         <ul className="space-y-6">
