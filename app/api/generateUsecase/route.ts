@@ -24,7 +24,7 @@ export async function POST(request: Request) {
     // Start timing the response
     const startTime = Date.now();
 
-    // Modified prompt to request specific "AI Can" style headings
+   
     const enhancedPrompt = `
     Analyze the website ${website} in real time and identify three innovative, practical, and relevant AI use cases for this company that can drive significant business growth. Dont go by the name of the website. Analyze the site in real.
     
