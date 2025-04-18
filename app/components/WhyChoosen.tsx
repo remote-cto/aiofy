@@ -185,8 +185,7 @@ const WhyChoosen: React.FC = () => {
             className="animate-pulse"
             style={{ animationDuration: "3s", animationDelay: "0.5s" }}
           />
-          
-          {/* Head outline */}
+
           <circle
             cx="12"
             cy="9"
@@ -197,8 +196,7 @@ const WhyChoosen: React.FC = () => {
             className="animate-pulse"
             style={{ animationDuration: "4s" }}
           />
-          
-          {/* Face */}
+
           <circle cx="9" cy="8" r="0.5" fill="currentColor" />
           <circle cx="15" cy="8" r="0.5" fill="currentColor" />
           <path
@@ -207,8 +205,7 @@ const WhyChoosen: React.FC = () => {
             strokeWidth={1.5}
             d="M9 11c.85 1.5 5.15 1.5 6 0"
           />
-          
-          {/* Person */}
+
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -221,8 +218,7 @@ const WhyChoosen: React.FC = () => {
             strokeWidth={2}
             d="M9 20l3-1 3 1"
           />
-          
-          {/* Technology connection */}
+
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
