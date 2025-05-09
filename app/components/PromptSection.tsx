@@ -22,9 +22,9 @@ const PromptSection = () => {
   const [error, setError] = useState<string | null>(null);
   const [emailSent, setEmailSent] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [showDomainPopup, setShowDomainPopup] = useState(false);
 
   useEffect(() => {
-    // Start the animation automatically every few seconds
     const interval = setInterval(() => {
       setIsAnimating(true);
       setTimeout(() => setIsAnimating(false), 2000);
@@ -39,6 +39,24 @@ const PromptSection = () => {
 
   const handleMouseLeave = () => {
     setIsAnimating(false);
+  };
+
+  const extractWebsiteDomain = (website: string): string => {
+    let domain = website.replace(/^(https?:\/\/)?(www\.)?/, "");
+
+    domain = domain.split("/")[0];
+    return domain.toLowerCase();
+  };
+
+  const extractEmailDomain = (email: string): string => {
+    const parts = email.split("@");
+    return parts.length > 1 ? parts[1].toLowerCase() : "";
+  };
+
+  const doDomainsMatch = (website: string, email: string): boolean => {
+    const websiteDomain = extractWebsiteDomain(website);
+    const emailDomain = extractEmailDomain(email);
+    return websiteDomain === emailDomain;
   };
 
   const validateEmail = (email: string): boolean => {
@@ -61,12 +79,15 @@ const PromptSection = () => {
       [name]: value,
     }));
 
-    // Clear error when typing
     if (formErrors[name as keyof typeof formErrors]) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
         [name]: "",
       }));
+    }
+
+    if (showDomainPopup) {
+      setShowDomainPopup(false);
     }
   };
 
@@ -76,7 +97,6 @@ const PromptSection = () => {
       setError(null);
       setEmailSent(false);
 
-      // API call to ChatGPT with updated prompt that includes "AI Can" headings
       const response = await fetch("/api/generateUsecase", {
         method: "POST",
         headers: {
@@ -95,7 +115,6 @@ const PromptSection = () => {
 
       const data = await response.json();
 
-      // Set the use cases from the response
       setUseCases(data.useCases);
       setEmailSent(true);
     } catch (error) {
@@ -121,6 +140,13 @@ const PromptSection = () => {
       isValid = false;
     }
 
+    if (isValid && formData.website && formData.email) {
+      if (!doDomainsMatch(formData.website, formData.email)) {
+        setShowDomainPopup(true);
+        isValid = false;
+      }
+    }
+
     setFormErrors(newErrors);
     return isValid;
   };
@@ -134,9 +160,12 @@ const PromptSection = () => {
 
     console.log("Form data submitted:", formData);
 
-    // Get AI-generated use cases
     await fetchAIUseCases(formData.website, formData.email);
     setSubmitted(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowDomainPopup(false);
   };
 
   return (
@@ -160,6 +189,29 @@ const PromptSection = () => {
         </span>
       </h1>
       <div className="p-5 bg-white rounded-lg shadow-sm mb-8">
+        {showDomainPopup && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+              <h3 className="text-xl font-bold text-red-600 mb-3">
+                Email Domain Error
+              </h3>
+              <p className="mb-4">
+                Please use an email address with the same domain as your
+                website. Your email domain should match your business website
+                domain.
+              </p>
+              <div className="flex justify-end">
+                <button
+                  onClick={handleClosePopup}
+                  className="bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit} className="mb-6">
           <div className="flex flex-col md:flex-row gap-4 md:items-start">
             <div className="flex-grow">
@@ -206,6 +258,9 @@ const PromptSection = () => {
                   formErrors.email ? "border-red-500" : "border-gray-300"
                 } rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFBF23]`}
               />
+              <p className="mt-1 text-xs text-gray-500">
+                Email must be from the same domain as your website
+              </p>
               {formErrors.email && (
                 <p className="mt-1 text-sm text-red-600">{formErrors.email}</p>
               )}
@@ -253,7 +308,6 @@ const PromptSection = () => {
                     ))}
                   </div>
 
-                  {/* Contact CTA section */}
                   <div className="mt-8 p-5 bg-yellow-50 rounded-lg border-yellow-300 text-center">
                     <h3 className="text-[35px] font-bold text-blue-900 mb-2">
                       We can get this done for you. FAST!
