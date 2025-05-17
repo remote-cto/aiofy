@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { Calendar, CheckCircle, ArrowRight, Users } from "lucide-react";
+import { Calendar, CheckCircle, ArrowRight, Users, Mail } from "lucide-react";
 
 // Define typescript interfaces
 interface Industry {
@@ -17,35 +17,55 @@ const StrategySessionPage = () => {
   const [company, setCompany] = useState("");
   const [role, setRole] = useState("");
   const [industry, setIndustry] = useState("");
+  const [email, setEmail] = useState(""); // Added email field
   const [challenge, setChallenge] = useState("");
   const [expandedFaqs, setExpandedFaqs] = useState<Record<number, boolean>>({});
   const [calendarLoaded, setCalendarLoaded] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState({
+    text: "",
+    isError: false,
+  });
   const calendlyWidgetRef = useRef<HTMLDivElement>(null);
-  const formDataRef = useRef({ name: "", company: "", role: "", industry: "", challenge: "" });
+  const formDataRef = useRef({
+    name: "",
+    company: "",
+    role: "",
+    industry: "",
+    email: "",
+    challenge: "",
+  });
 
   // Update formDataRef when form fields change
   useEffect(() => {
-    formDataRef.current = { name, company, role, industry, challenge };
-  }, [name, company, role, industry, challenge]);
+    formDataRef.current = { name, company, role, industry, email, challenge };
+  }, [name, company, role, industry, email, challenge]);
 
   // Load Calendly script & initialize widget once
   useEffect(() => {
     // Check if script already exists to prevent duplicate loading
-    if (document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+    if (
+      document.querySelector(
+        'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+      )
+    ) {
       setCalendarLoaded(true);
       return;
     }
 
     const script = document.createElement("script");
-    script.setAttribute("src", "https://assets.calendly.com/assets/external/widget.js");
+    script.setAttribute(
+      "src",
+      "https://assets.calendly.com/assets/external/widget.js"
+    );
     script.setAttribute("type", "text/javascript");
     script.setAttribute("async", "");
-    
+
     // Handle loading success
     script.onload = () => {
       console.log("Calendly script loaded successfully");
       setCalendarLoaded(true);
-      
+
       // Delay initialization to ensure Calendly is fully loaded
       setTimeout(initializeCalendly, 1000);
     };
@@ -54,13 +74,15 @@ const StrategySessionPage = () => {
     script.onerror = (error) => {
       console.error("Failed to load Calendly script:", error);
     };
-    
+
     document.head.appendChild(script);
 
     return () => {
       // Clean up only if we actually added the script
       try {
-        const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+        const existingScript = document.querySelector(
+          'script[src="https://assets.calendly.com/assets/external/widget.js"]'
+        );
         if (existingScript && document.head.contains(existingScript)) {
           document.head.removeChild(existingScript);
         }
@@ -70,25 +92,25 @@ const StrategySessionPage = () => {
     };
   }, []);
 
-  // Function to initialize or update Calendly widget with current form data
   const initializeCalendly = () => {
     if (window.Calendly && calendlyWidgetRef.current) {
       try {
-        const { name, company, role, industry, challenge } = formDataRef.current;
-        
+        const { name, company, role, industry, email, challenge } =
+          formDataRef.current;
+
         window.Calendly.initInlineWidget({
-          url: 'https://calendly.com/khitishkumarpradhan55?hide_gdpr_banner=1',
+          url: "https://calendly.com/real-human-aiofy?hide_gdpr_banner=1",
           parentElement: calendlyWidgetRef.current,
           prefill: {
             name,
-            email: '',
+            email: email || "",
             customAnswers: {
               a1: company,
               a2: role,
               a3: industry,
-              a4: challenge
-            }
-          }
+              a4: challenge,
+            },
+          },
         });
       } catch (error) {
         console.error("Error initializing Calendly widget:", error);
@@ -96,26 +118,66 @@ const StrategySessionPage = () => {
     }
   };
 
-  // Update Calendly widget when form is submitted
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log({ name, company, role, industry, challenge });
-    
-    // Scroll to the Calendly widget
-    if (calendlyWidgetRef.current) {
-      calendlyWidgetRef.current.scrollIntoView({ behavior: "smooth" });
-      
-      // Reinitialize Calendly with updated form data
-      if (calendarLoaded) {
-        initializeCalendly();
+ 
+  const sendFormData = async () => {
+    setIsSubmitting(true);
+    setSubmitMessage({ text: "", isError: false });
+
+    try {
+      const response = await fetch("/api/strategySession", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message: `
+Company: ${company}
+Role: ${role}
+Industry: ${industry}
+Challenge/Goal: ${challenge}
+          `,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit form");
       }
+
+      
+      setSubmitMessage({
+        text: "Thank you! Your information has been submitted successfully.",
+        isError: false,
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitMessage({
+        text:
+          error instanceof Error
+            ? error.message
+            : "Failed to submit form. Please try again.",
+        isError: true,
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
+ 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log({ name, company, role, industry, email, challenge });
+
+    await sendFormData();
+  };
+
   const toggleFaq = (index: number): void => {
-    setExpandedFaqs(prev => ({
+    setExpandedFaqs((prev) => ({
       ...prev,
-      [index]: !prev[index]
+      [index]: !prev[index],
     }));
   };
 
@@ -164,7 +226,6 @@ const StrategySessionPage = () => {
     },
   };
 
-  // FAQs
   const faqs: FAQ[] = [
     {
       question: "What happens after I book?",
@@ -182,7 +243,7 @@ const StrategySessionPage = () => {
     },
   ];
 
-  // AI benefits you'll get
+
   const benefits = [
     {
       title: "Personalized AI Opportunity Map",
@@ -300,12 +361,12 @@ const StrategySessionPage = () => {
             Book Your <span className="text-[#FFBF23]">Strategy Call</span>
           </h2>
 
-          <div className="bg-white rounded-2xl shadow-lg max-w-4xl mx-auto p-8 border border-gray-100">
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl shadow-lg max-w-5xl mx-auto p-8 border border-gray-100">
+            <div className="flex flex-col md:flex-row">
               {/* Form */}
-              <div>
+              <div className="md:w-5/12">
                 <h3 className="font-semibold text-lg mb-4 text-blue-900">
-                  A short intake form:
+                  Submit your information:
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
@@ -320,6 +381,23 @@ const StrategySessionPage = () => {
                       id="name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-1 text-gray-700"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
                       required
                     />
@@ -395,27 +473,64 @@ const StrategySessionPage = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#FFBF23] text-blue-900 py-3 px-6 rounded-lg transition duration-300 font-medium flex items-center justify-center"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#FFBF23] text-blue-900 py-3 px-6 rounded-lg transition duration-300 font-medium flex items-center justify-center disabled:opacity-70"
                   >
-                    <span className="mr-2">Book Now</span>
-                    <ArrowRight className="w-5 h-5" />
+                    {isSubmitting ? (
+                      "Submitting..."
+                    ) : (
+                      <>
+                        <Mail className="w-5 h-5 mr-2" />
+                        <span>Submit Information</span>
+                      </>
+                    )}
                   </button>
+
+                  {submitMessage.text && (
+                    <div
+                      className={`mt-4 p-3 rounded-md ${
+                        submitMessage.isError
+                          ? "bg-red-50 text-red-700"
+                          : "bg-green-50 text-green-700"
+                      }`}
+                    >
+                      {submitMessage.text}
+                    </div>
+                  )}
                 </form>
               </div>
 
+              {/* Divider with OR */}
+              <div className="flex flex-col items-center justify-center py-6 md:py-0 md:px-6">
+                <div className="hidden md:block h-full w-px bg-blue-900"></div>
+                <div className="md:hidden w-full h-px bg-blue-900my-4"></div>
+                <div className="bg-white px-3 py-2 text-blue-900 font-medium text-lg my-4">
+                  OR
+                </div>
+                <div className="hidden md:block h-full w-px bg-blue-900"></div>
+                <div className="md:hidden w-full h-px bg-blue-900 my-4"></div>
+              </div>
+
               {/* Calendly Widget */}
-              <div className="h-full min-h-96">
-                {!calendarLoaded ? (
-                  <div className="flex flex-col items-center justify-center h-full">
-                    <Calendar className="w-16 h-16 text-blue-900 mx-auto mb-4" />
-                    <p className="text-lg font-medium text-blue-900">Loading Calendar...</p>
-                  </div>
-                ) : (
-                  <div 
-                    ref={calendlyWidgetRef}
-                    className="calendly-inline-widget w-full h-full min-h-96"
-                  ></div>
-                )}
+              <div className="md:w-7/12">
+                <h3 className="font-semibold text-lg mb-4 text-blue-900">
+                  Book directly via calendar:
+                </h3>
+                <div className="h-full min-h-96">
+                  {!calendarLoaded ? (
+                    <div className="flex flex-col items-center justify-center h-full min-h-96 bg-gray-50 rounded-lg border border-gray-200">
+                      <Calendar className="w-16 h-16 text-blue-900 mx-auto mb-4" />
+                      <p className="text-lg font-medium text-blue-900">
+                        Loading Calendar...
+                      </p>
+                    </div>
+                  ) : (
+                    <div
+                      ref={calendlyWidgetRef}
+                      className="calendly-inline-widget w-full h-full min-h-96"
+                    ></div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
@@ -506,16 +621,18 @@ const StrategySessionPage = () => {
                   key={index}
                   className="border-b border-gray-200 pb-4 last:border-b-0"
                 >
-                  <div 
+                  <div
                     className="flex justify-between items-center cursor-pointer py-2"
                     onClick={() => toggleFaq(index)}
                   >
-                    <h3 className="text-xl font-bold text-blue-900">{faq.question}</h3>
+                    <h3 className="text-xl font-bold text-blue-900">
+                      {faq.question}
+                    </h3>
                     <div className="text-blue-900 text-2xl font-bold">
-                      {expandedFaqs[index] ? '-' : '+'}
+                      {expandedFaqs[index] ? "-" : "+"}
                     </div>
                   </div>
-                  
+
                   {expandedFaqs[index] && (
                     <div className="mt-2 text-gray-700">
                       <p>{faq.answer}</p>
