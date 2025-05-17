@@ -267,6 +267,11 @@ Challenge/Goal: ${challenge}
       title: "Strategic Implementation Plan",
       description: "Clear next steps to begin or accelerate your AI journey.",
     },
+     {
+      title: "Clarity on ROI",
+      description: "Know exactly what to expect and how soon results can be delivered.",
+    },
+
   ];
 
   return (
