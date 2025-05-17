@@ -68,18 +68,18 @@ const StrategySessionPage = () => {
   };
 
   // Industries we serve
-  const industries: Industry[] = [
-    { name: "Healthcare" },
-    { name: "FinTech" },
-    { name: "Smart Cities" },
-    { name: "Cybersecurity" },
-    { name: "Government" },
-    { name: "Media" },
-    { name: "Defense" },
-    { name: "Hospitality" },
-    { name: "Logistics" },
-    { name: "Crime Tech" },
-  ];
+//   const industries: Industry[] = [
+//     { name: "Healthcare" },
+//     { name: "FinTech" },
+//     { name: "Smart Cities" },
+//     { name: "Cybersecurity" },
+//     { name: "Government" },
+//     { name: "Media" },
+//     { name: "Defense" },
+//     { name: "Hospitality" },
+//     { name: "Logistics" },
+//     { name: "Crime Tech" },
+//   ];
 
   // FAQs
   const faqs: FAQ[] = [
@@ -385,7 +385,7 @@ const StrategySessionPage = () => {
         </section>
 
         {/* Industries We Serve Section */}
-        <section className="mb-20">
+        {/* <section className="mb-20">
           <motion.h2
             variants={titleVariants}
             className="text-center text-3xl md:text-5xl font-extrabold mb-14 text-blue-900 tracking-tight"
@@ -413,7 +413,7 @@ const StrategySessionPage = () => {
               ))}
             </div>
           </motion.div>
-        </section>
+        </section> */}
 
         {/* Why AIofy Section */}
         <section className="mb-20">
