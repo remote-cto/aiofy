@@ -118,7 +118,6 @@ const StrategySessionPage = () => {
     }
   };
 
- 
   const sendFormData = async () => {
     setIsSubmitting(true);
     setSubmitMessage({ text: "", isError: false });
@@ -147,7 +146,6 @@ Challenge/Goal: ${challenge}
         throw new Error(data.error || "Failed to submit form");
       }
 
-      
       setSubmitMessage({
         text: "Thank you! Your information has been submitted successfully.",
         isError: false,
@@ -166,7 +164,6 @@ Challenge/Goal: ${challenge}
     }
   };
 
- 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     console.log({ name, company, role, industry, email, challenge });
@@ -243,7 +240,6 @@ Challenge/Goal: ${challenge}
     },
   ];
 
-
   const benefits = [
     {
       title: "Personalized AI Opportunity Map",
@@ -267,11 +263,11 @@ Challenge/Goal: ${challenge}
       title: "Strategic Implementation Plan",
       description: "Clear next steps to begin or accelerate your AI journey.",
     },
-     {
+    {
       title: "Clarity on ROI",
-      description: "Know exactly what to expect and how soon results can be delivered.",
+      description:
+        "Know exactly what to expect and how soon results can be delivered.",
     },
-
   ];
 
   return (
@@ -361,12 +357,13 @@ Challenge/Goal: ${challenge}
         </section>
 
         {/* Booking Form Section */}
+        {/* Booking Form Section */}
         <section id="booking-section" className="mb-20">
           <h2 className="text-center text-3xl md:text-5xl font-extrabold mb-14 text-blue-900 tracking-tight">
             Book Your <span className="text-[#FFBF23]">Strategy Call</span>
           </h2>
 
-          <div className="bg-white rounded-2xl shadow-lg max-w-5xl mx-auto p-8 border border-gray-100">
+          <div className="bg-white rounded-2xl shadow-lg max-w-5xl mx-auto p-4 md:p-8 border border-gray-100">
             <div className="flex flex-col md:flex-row">
               {/* Form */}
               <div className="md:w-5/12">
@@ -508,7 +505,7 @@ Challenge/Goal: ${challenge}
               {/* Divider with OR */}
               <div className="flex flex-col items-center justify-center py-6 md:py-0 md:px-6">
                 <div className="hidden md:block h-full w-px bg-blue-900"></div>
-                <div className="md:hidden w-full h-px bg-blue-900my-4"></div>
+                <div className="md:hidden w-full h-px bg-blue-900 my-4"></div>
                 <div className="bg-white px-3 py-2 text-blue-900 font-medium text-lg my-4">
                   OR
                 </div>
@@ -521,9 +518,9 @@ Challenge/Goal: ${challenge}
                 <h3 className="font-semibold text-lg mb-4 text-blue-900">
                   Book directly via calendar:
                 </h3>
-                <div className="h-full min-h-96">
+                <div className="h-auto min-h-[500px] md:min-h-96">
                   {!calendarLoaded ? (
-                    <div className="flex flex-col items-center justify-center h-full min-h-96 bg-gray-50 rounded-lg border border-gray-200">
+                    <div className="flex flex-col items-center justify-center h-full min-h-[500px] md:min-h-96 bg-gray-50 rounded-lg border border-gray-200">
                       <Calendar className="w-16 h-16 text-blue-900 mx-auto mb-4" />
                       <p className="text-lg font-medium text-blue-900">
                         Loading Calendar...
@@ -532,7 +529,8 @@ Challenge/Goal: ${challenge}
                   ) : (
                     <div
                       ref={calendlyWidgetRef}
-                      className="calendly-inline-widget w-full h-full min-h-96"
+                      className="calendly-inline-widget w-full h-[650px] md:h-[500px]"
+                      data-auto-load="false"
                     ></div>
                   )}
                 </div>
