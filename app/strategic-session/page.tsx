@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Calendar, CheckCircle, ArrowRight, Users, Mail } from "lucide-react";
 
-// Define typescript interfaces
 interface Industry {
   name: string;
 }
@@ -17,7 +16,7 @@ const StrategySessionPage = () => {
   const [company, setCompany] = useState("");
   const [role, setRole] = useState("");
   const [industry, setIndustry] = useState("");
-  const [email, setEmail] = useState(""); // Added email field
+  const [email, setEmail] = useState("");
   const [challenge, setChallenge] = useState("");
   const [expandedFaqs, setExpandedFaqs] = useState<Record<number, boolean>>({});
   const [calendarLoaded, setCalendarLoaded] = useState(false);
@@ -36,14 +35,12 @@ const StrategySessionPage = () => {
     challenge: "",
   });
 
-  // Update formDataRef when form fields change
   useEffect(() => {
     formDataRef.current = { name, company, role, industry, email, challenge };
   }, [name, company, role, industry, email, challenge]);
 
   // Load Calendly script & initialize widget once
   useEffect(() => {
-    // Check if script already exists to prevent duplicate loading
     if (
       document.querySelector(
         'script[src="https://assets.calendly.com/assets/external/widget.js"]'
@@ -66,7 +63,6 @@ const StrategySessionPage = () => {
       console.log("Calendly script loaded successfully");
       setCalendarLoaded(true);
 
-      // Delay initialization to ensure Calendly is fully loaded
       setTimeout(initializeCalendly, 1000);
     };
 
@@ -208,21 +204,6 @@ Challenge/Goal: ${challenge}
     },
   };
 
-  const titleVariants = {
-    hidden: {
-      opacity: 0,
-      y: -50,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 120,
-      },
-    },
-  };
-
   const faqs: FAQ[] = [
     {
       question: "What happens after I book?",
@@ -272,7 +253,6 @@ Challenge/Goal: ${challenge}
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
       <header className="bg-[#FFBF23] text-blue-900 py-16">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h1 className="text-3xl md:text-6xl font-extrabold mb-4 tracking-tight">
@@ -320,7 +300,6 @@ Challenge/Goal: ${challenge}
           </div>
         </section>
 
-        {/* Who Should Book Section */}
         <section className="mb-20">
           <h2 className="text-center text-3xl md:text-5xl font-extrabold mb-14 text-blue-900 tracking-tight">
             Who Should <span className="text-[#FFBF23]">Book</span>
@@ -356,7 +335,6 @@ Challenge/Goal: ${challenge}
           </div>
         </section>
 
-        {/* Booking Form Section */}
         {/* Booking Form Section */}
         <section id="booking-section" className="mb-20">
           <h2 className="text-center text-3xl md:text-5xl font-extrabold mb-14 text-blue-900 tracking-tight">
@@ -611,7 +589,6 @@ Challenge/Goal: ${challenge}
           </div>
         </section>
 
-        {/* FAQs Section */}
         <section className="mb-20">
           <h2 className="text-center text-3xl md:text-5xl font-extrabold mb-14 text-blue-900 tracking-tight">
             <span className="text-[#FFBF23]">FAQs</span>
@@ -657,7 +634,6 @@ Challenge/Goal: ${challenge}
   );
 };
 
-// Add TypeScript interface for the Window object
 declare global {
   interface Window {
     Calendly?: any;
