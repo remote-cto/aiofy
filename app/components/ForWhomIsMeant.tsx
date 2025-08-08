@@ -16,24 +16,12 @@ const ForWhomIsMeant: React.FC = () => {
         "Shape your organization’s AI vision, identify strategic opportunities, and lead responsible adoption that delivers measurable business impact. ",
     },
     {
-      title: "Corporate Professionals & Managers",
+      title: "Corporate Professional and Analysts",
       icon: <Building className="w-6 h-6 text-[#FDC700]" />,
       description:
         "Understand how to implement AI solutions that improve efficiency and decision-making in your department.",
     },
-    {
-      title: "MBA Students & Aspiring Strategists",
-      icon: <GraduationCap className="w-6 h-6 text-[#FDC700]" />,
-      description:
-        "Build the AI knowledge and skills that will make you valuable in the evolving business landscape.",
-    },
-    {
-      title: "Consultants, Analysts & Product Leads",
-      icon: <PieChart className="w-6 h-6 text-[#FDC700]" />,
-      description:
-        "Gain insights on AI applications that you can incorporate into your client solutions and product roadmaps.",
-    },
-  ];
+    ];
 
   return (
     <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
