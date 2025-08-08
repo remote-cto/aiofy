@@ -1,5 +1,5 @@
 import React from "react";
-import { Check, Users, Building, GraduationCap, PieChart } from "lucide-react";
+import { Crown, Check, Users, Building, GraduationCap, PieChart } from "lucide-react";
 
 const ForWhomIsMeant: React.FC = () => {
   const targetAudiences = [
