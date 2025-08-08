@@ -4,39 +4,48 @@ const WhatYouWillLearn = () => {
   const learningPoints = [
     {
       icon: "🔍",
-      text: "AI Demystified: What AI really is — and what it's not",
+      title: "AI Demystified: What AI really is — and what it's not",
+      description: "Cut through the hype to understand exactly what AI can (and can’t) do — so you can make confident business calls without getting lost in jargon.",
     },
     {
       icon: "💼",
-      text: "AI in Business Today: Case studies from finance, retail, healthcare, and marketing",
+      title: "AI’s Impact on Competitive Advantage",
+      description: "How leading companies are using AI to reduce costs, accelerate growth, and disrupt industries — and what this means for your market.",
     },
     {
       icon: "🧠",
-      text: "Understanding Machine Learning & Neural Networks (no code needed)",
+      title: " Strategic AI Literacy for Leaders",
+      description: "Understand how machine learning, neural networks, and AI agents work — in plain English — so you can evaluate proposals, vendors, and investments.",
     },
     {
       icon: "⚙️",
-      text: "AI Tools & Platforms: What you can use without being a techie",
+      title: "AI Tools That Deliver Business Value",
+      description: "Non-technical tools and platforms you can deploy immediately for marketing, operations, decision-making, and customer engagement.",
     },
     {
       icon: "🌟",
-      text: "Designing AI-Enabled Products & Services",
+      title: "Designing AI-Driven Offerings",
+      description: "Spot opportunities to create AI-enabled products or services that enhance your current portfolio and open new revenue streams.",
     },
     {
       icon: "📊",
-      text: "Data for AI: How to source, structure, and use data effectively",
+      title: "Data as Your New Growth Engine",
+      description: "The board-level essentials: how to identify, acquire, structure, and leverage data to power AI — while ensuring compliance and security.",
     },
     {
       icon: "🤖",
-      text: "AI Agents & Automation in Business Workflows",
+      title: "AI Agents & Workflow Automation",
+      description: "Where AI can replace, augment, or enhance human decision-making across your organization — with examples you can start on tomorrow.",
     },
     {
-      icon: "🚀",
-      text: "Building Your First AI Strategy for your company/startup",
+      icon: "🚀 ",
+      title: "Building an AI Roadmap",
+      description: "A clear, action-focused framework to pilot AI in your business within 90 days and scale responsibly.",
     },
     {
-      icon: "📝",
-      text: "Risks, Ethics & Limitations of AI",
+      icon: "📝 ",
+      title: "Ethics, Risk & Governance",
+      description: "How to lead with AI responsibly: bias, transparency, accountability, and regulatory considerations every CXO must be prepared for.",
     },
   ];
 
@@ -52,13 +61,13 @@ const WhatYouWillLearn = () => {
       <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl shadow-md p-8 max-w-4xl mx-auto">
         <ul className="space-y-6">
           {learningPoints.map((point, index) => (
-            <li key={index} className="flex items-start group">
+            <li key={index} className="flex items-start group"> 
               <span className="text-2xl mr-4 flex-shrink-0 bg-white p-2 rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:scale-110">
-                {point.icon}
+                {point.icon}<strong>{point.title}</strong>
               </span>
               <div className="pt-1">
                 <p className="text-lg text-gray-800 group-hover:text-[#FDC700] transition-colors duration-300">
-                  {point.text}
+                  {point.description}
                 </p>
               </div>
             </li>
