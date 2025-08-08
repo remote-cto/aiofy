@@ -63,13 +63,17 @@ const WhatYouWillLearn = () => {
           {learningPoints.map((point, index) => (
             <li key={index} className="flex items-start group"> 
               <span className="text-2xl mr-4 flex-shrink-0 bg-white p-2 rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 group-hover:scale-110">
-                {point.icon}<strong>{point.title}</strong>
+                {point.icon}
               </span>
-              <div className="pt-1">
-                <p className="text-lg text-gray-800 group-hover:text-[#FDC700] transition-colors duration-300">
-                  {point.description}
-                </p>
-              </div>
+                {/* Text container */}
+            <div>
+              <p className="text-lg font-bold text-gray-900 group-hover:text-[#FDC700] transition-colors duration-300">
+                {point.title}
+              </p>
+              <p className="text-gray-700 mt-1">
+                {point.description}
+              </p>
+               </div>
             </li>
           ))}
         </ul>
