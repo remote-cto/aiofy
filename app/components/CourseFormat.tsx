@@ -26,7 +26,7 @@ const CourseFormat: React.FC = () => {
   const formatItems = [
     {
       icon: <Clock className="w-6 h-6 text-coral-500" />,
-      title: "Duration: 8 hours (Weekend & Weekday options)",
+      title: "Duration: 5 hours (Weekend & Weekday options)",
       details:
         "Flexible scheduling to fit your busy calendar - choose what works best for you.",
     },
