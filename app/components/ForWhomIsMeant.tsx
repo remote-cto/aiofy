@@ -4,16 +4,16 @@ import { Crown, Check, Users, Building, GraduationCap, PieChart } from "lucide-r
 const ForWhomIsMeant: React.FC = () => {
   const targetAudiences = [
     {
-      title: "C-Level Executives & Senior Leaders",
-      icon: <Crown className="w-6 h-6 text-[#FDC700]" />,
-      description:
-        "Shape your organization’s AI vision, identify strategic opportunities, and lead responsible adoption that delivers measurable business impact. ",
-    },
-    {
       title: "Business Owners & Founders",
       icon: <Users className="w-6 h-6 text-[#FDC700]" />,
       description:
         "Learn how AI can drive growth and innovation in your business regardless of size or industry.",
+    },
+    {
+      title: "C-Level Executives & Senior Leaders",
+      icon: <Crown className="w-6 h-6 text-[#FDC700]" />,
+      description:
+        "Shape your organization’s AI vision, identify strategic opportunities, and lead responsible adoption that delivers measurable business impact. ",
     },
     {
       title: "Corporate Professionals & Managers",
