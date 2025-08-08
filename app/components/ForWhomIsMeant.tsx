@@ -7,7 +7,7 @@ const ForWhomIsMeant: React.FC = () => {
       title: "C-Level Executives & Senior Leaders",
       icon: <Briefcase className="w-6 h-6 text-[#FDC700]" />,
       description:
-        "Shape your organization’s AI vision, identify strategic opportunities, and lead responsible adoption that delivers measurable business impact.",
+        "Shape your organization’s AI vision, identify strategic opportunities, and lead responsible adoption that delivers measurable business impact. ",
     },
     {
       title: "Business Owners & Founders",
